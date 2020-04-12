@@ -7,24 +7,12 @@
 #include <iostream>
 #include <string>
 
-/*!
-*\file Session.hpp
-*\brief {Définition d'une session et de ses caractéristiques}
-*\author Groupe A4
-*\version 0.1
-*\date 10 avril 2020
-
-\class Session
-*/
 
 class Session {
 private:
     std::string ID;
     std::string Pass;
-public:
-    /*!
-     * \brief Permet la gestion de connexion aux sessions
-     */
+public:a
     bool Connection();
 };
 
