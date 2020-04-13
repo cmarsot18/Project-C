@@ -23,7 +23,7 @@ class Association {
         str Lieu;
         int Nombre_Membres;
         vector<Membre> Membres;
-        
+        vector<Consultant> Consultants;
     
     
     public:
@@ -43,7 +43,7 @@ class Association {
      * \brief Constructeur de la classe association
      * Crée une association pour laquelle on connait le nom, le lieu du siège et les membres
      */
-        Association(str,str,int,vector<Membre>);
+        Association(str,str,int,vector<Membre>,vector<Consultant>);
         
     /*!
      * \brief Destructeur de la classe association
