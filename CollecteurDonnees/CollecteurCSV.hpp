@@ -1,6 +1,7 @@
 #ifndef COLLECTEURCSV_H
 #ifdefine COLLECTEURCSV_H
 
+#include <string>
 #include "CollecteurDonnees.hpp"
 
 /*!
@@ -15,14 +16,14 @@
 classe CollecteurCSV {
 
     private :
-        String path;
+    std::string path;
         
     public :
     /*!
     * \brief Génération d'un membre
     * Permet de collecter les données d'un membre à partir de son nom et de son prénom
     */
-        virtual static void Generer_membre(String Nom, String Prenom);
+        virtual static void Generer_membre( std::string  Nom,  std::string  Prenom);
 
     /*!
     * \brief Génération des membres

@@ -1,6 +1,8 @@
 #ifndef COLLECTEURDONNEES_H
 #ifdefine COLLECTEURDONNEES_H
 
+#include <string>
+
 /*!
 *\file CollecteurDonnees.hpp
 *\brief {Définition de l'interface permettant de collecter les données}
@@ -18,7 +20,7 @@ classe CollecteurDonnees {
      * \brief Génération d'un membre
      * Permet de collecter les données d'un membre à partir de son nom et de son prénom
      */
-        virtual static void Generer_membre(String Nom, String Prenom) =0;
+        virtual static void Generer_membre(std::string Nom, std::string Prenom) =0;
 
 
     /*!
