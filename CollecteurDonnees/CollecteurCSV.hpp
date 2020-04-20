@@ -1,5 +1,5 @@
 #ifndef COLLECTEURCSV_H
-#ifdefine COLLECTEURCSV_H
+#define COLLECTEURCSV_H
 
 #include <string>
 #include "CollecteurDonnees.hpp"
@@ -13,7 +13,7 @@
 
 \class CollecteurCSV
 */
-classe CollecteurCSV {
+class CollecteurCSV {
 
     private :
     std::string path;
@@ -23,19 +23,19 @@ classe CollecteurCSV {
     * \brief Génération d'un membre
     * Permet de collecter les données d'un membre à partir de son nom et de son prénom
     */
-        virtual static void Generer_membre( std::string  Nom,  std::string  Prenom);
+        static void Generer_membre( std::string  Nom,  std::string  Prenom);
 
     /*!
     * \brief Génération des membres
     * Permet de collecter les données de tous les membres
     */
-        virtual static void Generer_membres();
+        static void Generer_membres();
 
 
     /*!
     * \brief Génération de l'association
     * Permet de collecter les données de l'association en général
     */
-        virtual static void Generer_Association();
-}
+         static void Generer_Association();
+};
 #endif

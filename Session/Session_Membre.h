@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+#include "Membre.h"
 #include "Session_Consultant.h"
 
 /*!
@@ -22,7 +23,7 @@
  * Elle permet aux membres de cunsulter leur fiche ainsi que celle de l'association et donc hérite de session consultant
  */
 
-class Session_Membre ; public {
+class Session_Membre {
 private :
     Membre personne;
 public:
@@ -30,7 +31,7 @@ public:
     Personne getMembre() const;
     Session_Membre();
     Session_Membre(const Personne);
-    virtual ~Session_Mebre();
+    virtual ~Session_Membre();
 /*!
 * \brief affiche la fiche asso
 * permet de consulter la fiche de l'association

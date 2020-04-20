@@ -26,7 +26,7 @@ private:
     std::string ID;
     std::string Pass;
 public:
-    Session(const std::string,const std::string)
+    Session(const std::string,const std::string);
     void setID(const std::string);
     void setPass(const std::string);
     std::string getID() const;
@@ -38,14 +38,6 @@ public:
      */
     bool Connection(const std::string,const std::string) const;
 };
-
-int main()
-{
-    Session test("identifiant","motdepasse")
-    std::cout << "La connection dans le cas d'identifiants correct est : "+test.Connection("identifiant","motdepasse") << std::endl
-    std::cout << "La connection dans le cas d'identifiant incorrect est : "+test.Connection("identifian","motdepasse") << std::endl
-    std::cout << "La connection dans le cas de mot de passe incorecte est : "+test.Connection("identifiant","motdepass") << std::endl
-}
 
 
 #endif //PROJET_C_SESSION_H

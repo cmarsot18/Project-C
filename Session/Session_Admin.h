@@ -16,7 +16,7 @@
 #include <string>
 #include "Session_Membre.h"
 #include "Session.h"
-#include "Personne.h"
+#include "Personne.hpp"
 
 /*!
  * \Class Session_Admin

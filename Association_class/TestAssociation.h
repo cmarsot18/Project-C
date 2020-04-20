@@ -1,33 +1,39 @@
-#ifndef PROJECT_C_TESTASSOCIATION_H
-#define PROJECT_C_TESTASSOCIATION_H
+#ifndef TEST_ASSOCIATION_H
+#define TEST_ASSOCIATION_H
 
-/*!
- * \file TestAssociation.h
- * \brief Test d'une association
- * \author Groupe A4
- * \version 0.1
- */
 
+#include <string>
 #include <vector>
-#include "Personne.hpp"
+
+#include "../Test/TestUnit.h"
 #include "Association.hpp"
 
-/*!
- * \Class TestAssociation
- * \brief Cette classe teste une association
- * Elle vérifie le bon fonctionnement des méthodes (à l'exception des accesseurs)
- */
+using namespace std;
 
-class TestAssociation {
+#define CLASS_NAME_STRING "Association"
+
+
+class TestAssociation : public CppUnit::TestFixture {
+private:
+    string nom;
+    string lieu;
+    vector<Membre> vm;
+    vector<Consultant*>vc;
 
 public:
-    void testAssociation(str,str,int,vector<Membre>,vector<Consultant>);
-    void testAjouterMembre(Personne);
-    void testSupprimerMembre(Personne);
+    TestAssociation();
+    virtual ~TestAssociation();
+
+    void setUp();
+    void tearDown();
+
+    CppUnit::TestSuite * make_suite();
+
+    TEST_DECL(Association);
+    TEST_DECL(ajouterMembre);
+    TEST_DECL(supprimerMembre);
+    TEST_DECL(fail);
+
 };
 
-
-
-
-
-#endif
+#endif /* TEST_ASSOCIATION_H */

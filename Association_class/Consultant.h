@@ -1,5 +1,5 @@
 #ifndef CONSULTANT_H
-#ifdefine CONSULTANT_H
+#define CONSULTANT_H
 
 /*!
  * \file Consultant.hpp
@@ -7,6 +7,7 @@
  * \author groupe A4
  */
 #include <string>
+#include <list>
 #include "Personne.hpp"
 
 /*! \class Consultant
@@ -15,12 +16,12 @@
    *  La classe est heritee de la classe Personne qui definit plus prondement les attributs d une personne 
    */
 class Consultant : private Personne {
-    std::list<string> liste_Attribut; /*!< Liste des attributs*/
-    static str pole
+    std::list<std::string> liste_Attribut; /*!< Liste des attributs*/
+    static std::string pole;
 /*!< definition de type de pole*/
 /*! * \brief il s agit d un attribut static puisque qu il sera consultant peut importe sa mission
    */
-    str mission;/*!< Nom de la mission en cours*/
+    std::string mission;/*!< Nom de la mission en cours*/
 
 public:
     /*!
@@ -29,6 +30,7 @@ public:
     *  Constructeur de la classe Consultant
     */
     Consultant();
+
     /*!
     *  \brief Constructeur
     *
@@ -36,7 +38,8 @@ public:
     *
     *  \param m : nom de la mission en cours
     */
-    Consultant(str m);
+    Consultant(std::string m);
+
     /*!
     *  \brief Constructeur
     *
@@ -45,13 +48,15 @@ public:
     *  \param m : nom de la mission en cours
     *  \param lAttribut : liste des attributs
     */
-    Consultant(std::list<string> lAttribut,str m);
+    Consultant(std::list<std::string> lAttribut, std::string m);
+
     /*!
      *  \brief Destructeur
      *
      *  Destructeur de la classe Consultant
      */
     virtual ~Consultant();
+
     /*!
      *  \brief Donne le nom de la mission
      *
@@ -59,7 +64,8 @@ public:
      *
      *  \return un str qui est le nom de la mission
      */
-    str getMission() const;
+    std::string getMission() const;
+
     /*!
      *  \brief Rentre le nom de la mission
      *
@@ -67,7 +73,8 @@ public:
      *
      *  \param m : le nom de la mission 
      */
-    void setMission(str m);
+    void setMission(std::string m);
+
     /*!
      *  \brief Donne la liste des attributs
      *
@@ -75,8 +82,8 @@ public:
      *
      *  \return un std::list<string qui est la liste des attribus du consultant
      */
-    std::list<string getAttribut() const;
+    std::list<std::string> getAttribut() const;
 
-
+};
 
 #endif // CONSULTANT_H

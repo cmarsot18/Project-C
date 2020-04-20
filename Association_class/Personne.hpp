@@ -1,6 +1,8 @@
 #ifndef PERSONNE_H 
 #define PERSONNE_H 
 
+#include <string>
+
 /*!
 *\file Personne.hpp
 *\brief {Définition d'une personne par ses caractéristiques}
@@ -12,14 +14,14 @@
 */
 
 class Personne {   
-	private:         
-		str nom;
-		str prenom;
+	protected:
+		std::string nom;
+		std::string prenom;
 		int age;
-		str adresse;
-		str mail;
+		std::string adresse;
+		std::string mail;
 		int annee;
-		str departement;
+		std::string departement;
 		
 }; 
 
