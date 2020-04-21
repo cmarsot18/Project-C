@@ -25,6 +25,8 @@ using namespace std;
  */
 
 class TestConsultant : public CppUnit::TestFixture {
+private:
+    Personne consultant;
 public:
     Session_Consultant();
     virtual ~Session_Consultant();
