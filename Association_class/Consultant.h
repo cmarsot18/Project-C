@@ -17,7 +17,7 @@
    */
 class Consultant : private Personne {
     std::list<std::string> liste_Attribut; /*!< Liste des attributs*/
-    static std::string pole;
+    static std::string pole = "Consultant";
 /*!< definition de type de pole*/
 /*! * \brief il s agit d un attribut static puisque qu il sera consultant peut importe sa mission
    */

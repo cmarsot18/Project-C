@@ -98,7 +98,7 @@ CppUnit::TestSuite * TestAssociation::make_suite() {
 /**
  * main function
  */
- /*
+
 int main(int argc, char *argv[]) {
     CppUnit::TextUi::TestRunner runner;
 
