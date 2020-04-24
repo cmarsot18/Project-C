@@ -2,7 +2,7 @@
 // Created by yasmine on 16/04/2020.
 //
 
-#include "TestConsultant.h"
+#include "TestSessionConsultant.h"
 /*
 #include <algorithm>
 #include <iterator>
@@ -10,13 +10,13 @@
 */
 using namespace std;
 
-TestConsultant::TestConsultant(){
+TestSessionConsultant::TestSessionConsultant(){
 
 };
 
 // ----------------------------------------------
 
-TestConsultant::~TestConsultant(){
+TestSessionConsultant::~TestSessionConsultant(){
 
 };
 
@@ -24,14 +24,14 @@ TestConsultant::~TestConsultant(){
 /**
  * setUp: function called before each test
  */
-void TestConsultant::setUp() {
+void TestSessionConsultant::setUp() {
     Personne consultant;
 }
 
 /**
  * setUp: function called after each test
  */
-void TestConsultant::tearDown() {
+void TestSessionConsultant::tearDown() {
 }
 
 /**
@@ -39,14 +39,14 @@ void TestConsultant::tearDown() {
  * sum i=1,size of v[i] which is supposed to be
  * equal to size*(size+1)/2
  */
-void TestConsultant::testConsultant() {
+void TestSessionConsultant::TestSessionConsultant() {
     // vector has been filled by method 'setUp'
     Session_Consultant * C1 = new Session_Consultant( consultant );
 
     CPPUNIT_ASSERT(C1->getConsultant() == consultant);
 }
 
-void TestConsultant::test_Consulter_fiche() {
+void TestSessionConsultant::test_Consulter_fiche() {
     Session_Consultant * C1 = new Session_Consultant( consultant );
     C1->Consulter_fiche();
     //Taiter le cas ou il n'y a pas de fiche existante
@@ -64,7 +64,7 @@ void TestAssociation::test_fail() {
  * declare suite of tests
  *
  */
-CppUnit::TestSuite * TestConsultant::make_suite() {
+CppUnit::TestSuite * TestSessionConsultant::make_suite() {
     CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
     cout << "==============================================" << endl;
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;

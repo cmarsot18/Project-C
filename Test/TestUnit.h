@@ -19,5 +19,9 @@ using namespace std;
 #define TEST_ADD(name) \
 	suite->addTest(new CppUnit::TestCaller<TestAssociation>("test_"#name, \
 		&TestAssociation::test_##name));
+    suite->addTest(new CppUnit::TestCaller<TestSession>("test_"#name, \
+		&TestSession::test_##name));
+    //suite->addTest(new CppUnit::TestCaller<TestSessionConsultant>("test_"#name, \
+		&TestConsultantSession::test_##name));
 
 #endif /* TEST_UNIT_H */
