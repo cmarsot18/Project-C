@@ -2,11 +2,13 @@
  * main function
  */
 #include "../Association_class/TestAssociation.h"
+#include "../Session/TestSession.h"
+#include "../Session/TestSessionConsultant.h"
 
 int main(int argc, char *argv[]) {
 //  TestMembre testMembre;
     TestAssociation testAssociation;
-//  TestSession testSession;
+    TestSession testSession;
 //  TestSessionConsultant testSessionConsultant;
     CppUnit::TextUi::TestRunner runner;
 
