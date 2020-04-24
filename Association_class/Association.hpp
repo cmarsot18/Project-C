@@ -32,19 +32,19 @@ private:
 public:
     /*!
      * \brief Constructeur de la classe association
-     * Crée une association "vide", avec aucune information
+     * Crée une association "vide", sans aucune information.
      */
     Association();
 
     /*!
      * \brief Constructeur de la classe association
-     * Crée une association ayant un nom mais aucune autre information
+     * Crée une association ayec un nom seulement.
      */
     Association(string p_nom);
 
     /*!
      * \brief Constructeur de la classe association
-     * Crée une association pour laquelle on connait le nom, le lieu du siège et les membres
+     * Crée une association pour laquelle on connait le nom et le lieu du siège.
      */
     Association(string p_nom, string p_lieu);
 
@@ -84,7 +84,7 @@ public:
     vector<Membre> getMembres() const;
 
     /*!
-     * \brief Permet d'obtenir la liste des membres de l'association
+     * \brief Permet de modifier la liste des membres de l'association
      */
     vector<Membre> setMembres(vector<Membre> p_listeMembres);
 
