@@ -29,7 +29,7 @@ private:
     std::string ID;
     std::string Pass;
 public:
-    //TestSession(const std::string,const std::string);
+    TestSession(const std::string,const std::string);
 
     void setUp();
     void tearDown();

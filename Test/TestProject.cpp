@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
 //  TestMembre testMembre;
     TestAssociation testAssociation;
     TestSession testSession;
-    TestSessionConsultant testSessionConsultant;
+//  TestSessionConsultant testSessionConsultant;
     CppUnit::TextUi::TestRunner runner;
 
 //    CppUnit::TestSuite *membreSuite = testMembre.make_suite();
