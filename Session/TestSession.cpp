@@ -3,11 +3,7 @@
 //
 
 #include "TestSession.h"
-/*
-#include <algorithm>
-#include <iterator>
-#include <numeric>
-*/
+
 using namespace std;
 
 TestSession::TestSession(){
@@ -33,7 +29,7 @@ void TestSession::setUp() {
 /**
  * setUp: function called after each test
  */
-void TestAssociation::tearDown() {
+void TestSession::tearDown() {
 }
 
 /**
@@ -49,7 +45,7 @@ void TestSession::test_Session() {
     CPPUNIT_ASSERT(S1->getPass() == Pass);
 }
 
-void TestAssociation::test_Connection() {
+void TestSession::test_Connection() {
     Session * S1 = new Session( ID, Pass );
     S1->(Connection(ID,Pass));
     CPPUNIT_ASSERT(S1->Connection(ID1,Pass1) == TRUE);
@@ -61,7 +57,7 @@ void TestAssociation::test_Connection() {
 /**
  * Test that will fail, used for example purpose
  */
-void TestAssociation::test_fail() {
+void TestSession::test_fail() {
     CPPUNIT_ASSERT(0 == 1);
 }
 
