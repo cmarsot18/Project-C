@@ -12,6 +12,11 @@ using namespace std;
 
 #define CLASS_NAME_STRING "Association"
 
+/*!
+ * \Class TestAssociation
+ * \brief Cette classe définit les tests de la classe Association
+ */
+
 
 class TestAssociation : public CppUnit::TestFixture {
 private:
@@ -21,17 +26,41 @@ private:
     vector<Consultant*>vc;
 
 public:
+    /*!
+     * \brief Constructeur de la classe TestAssociation
+     */
     TestAssociation();
+    /*!
+     * \brief Destructeur de la classe TestAssociation
+     */
     virtual ~TestAssociation();
 
+    /*!
+     * \brief Création des éléments permettant de mettre en place les tests
+     */
     void setUp();
+    /*!
+     * \brief Libère la mémoire qui contenait les éléments de test
+     */
     void tearDown();
 
     CppUnit::TestSuite * make_suite();
-
+     /*!
+     * \brief Test du constructeur de la classe association
+     */
     TEST_DECL(Association);
+    /*!
+    * \brief Test de l'ajout d'un membre
+    */
     TEST_DECL(ajouterMembre);
+    /*!
+    * \brief Test de la suppression
+    */
     TEST_DECL(supprimerMembre);
+    /*!
+     * \brief Ce test vérifie que CppUnit fonctionne correctement
+     * Il fait vérifier l'assertion 0==1, pour vérifier qu'il y a bien une erreur
+     */
     TEST_DECL(fail);
 
 };

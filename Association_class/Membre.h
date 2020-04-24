@@ -85,6 +85,12 @@ public:
      */
 //    std::list<std::string> getAttribut() const;
 
+    bool operator == (const Membre obj1)
+    {
+        return (this->nom == obj1.nom
+                && this->prenom == obj1.prenom);
+    }
+
 };
 
 #endif // MEMBRE_H

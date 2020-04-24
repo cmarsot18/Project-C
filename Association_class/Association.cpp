@@ -1,4 +1,6 @@
+#include <algorithm>
 #include "Association.hpp"
+using namespace std;
 
 Association::Association(){
 
@@ -35,8 +37,9 @@ string Association::getLieu() const{
 };
 
 
-string Association::setLieu(string lieu){
-
+string Association::setLieu(string p_lieu){
+    lieu = p_lieu;
+    return lieu;
 };
 
 int Association::getNombre_Membres() const{
@@ -44,19 +47,20 @@ int Association::getNombre_Membres() const{
 };
 
 vector<Membre> Association::getMembres() const{
-
+    return membres;
 };
 
 vector<Membre> Association::setMembres(vector<Membre> listeMembres) {
     membres = listeMembres;
     return membres;
-//    copy(listeMembres.begin(), listeMembres.end(), back_inserter(membres));
 };
 
 void Association::ajouterMembre(const Membre p_membre){
     membres.push_back( p_membre );
 };
 
-void Association::supprimerMembre(Membre membre){
-
+void Association::supprimerMembre(Membre p_membre){
+    vector<Membre>::iterator it;
+    it = find(membres.begin(), membres.end(),p_membre);
+    membres.erase(it);
 };

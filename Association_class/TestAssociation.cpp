@@ -48,11 +48,10 @@ void TestAssociation::test_Association() {
     CPPUNIT_ASSERT(ajir->getNom() == nom);
     CPPUNIT_ASSERT(ajir->getLieu() == lieu);
 
-//    Association ajir2 = new Association( nom, lieu );
-//    CPPUNIT_ASSERT(ajir.getLieu() == lieu);
+    CPPUNIT_ASSERT_THROW(Association * ajir2 = new Association( nom, lieu ) , exception);
 
-//    Association ajir3 = new Association( "" );
-//    CPPUNIT_ASSERT(ajir.getLieu() == lieu);
+    CPPUNIT_ASSERT_THROW(Association * ajir3 = new Association( "" , lieu ) , exception);
+
 }
 
 void TestAssociation::test_ajouterMembre() {
@@ -60,6 +59,8 @@ void TestAssociation::test_ajouterMembre() {
     ajir->setMembres( vm );
     ajir->ajouterMembre( Membre( "Devco", "Marsot", "Corentin"));
     CPPUNIT_ASSERT(ajir->getNombre_Membres() == 3);
+
+    CPPUNIT_ASSERT_THROW( ajir->ajouterMembre( Membre( "Devco", "Marsot", "Corentin")) , exception);
 }
 
 void TestAssociation::test_supprimerMembre() {
@@ -67,6 +68,8 @@ void TestAssociation::test_supprimerMembre() {
     ajir->setMembres( vm );
     ajir->supprimerMembre( Membre( "Devco", "Fiche", "Guenole"));
     CPPUNIT_ASSERT(ajir->getNombre_Membres() == 1);
+
+    CPPUNIT_ASSERT_THROW( ajir->supprimerMembre( Membre( "Devco", "Marsot", "Corentin")) , exception);
 }
 
 /**
