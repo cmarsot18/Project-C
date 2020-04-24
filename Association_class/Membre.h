@@ -22,12 +22,6 @@ class Membre : private Personne {
     string pole;/*!< definition de type de pole*/
 
 public:
-    /*!
-        *  \brief Constructeur
-        *
-        *  Constructeur de la classe Membre
-        */
-    Membre();
 
     /*!
     *  \brief Constructeur
@@ -48,8 +42,8 @@ public:
     */
     Membre( string p_pole, string p_nom, string p_prenom );
 
-    Membre( string p_pole, string p_nom, string p_prenom, int p_age, string p_adresse,
-            string p_mail, int p_annee, string p_departement );
+    Membre( string p_pole, string p_nom, string p_prenom,
+            string p_mail,string p_departement );
     /*!
      *  \brief Destructeur
      *
@@ -64,26 +58,96 @@ public:
      *
      *  \return un str qui est le nom du pole
      */
-    std::string getpole() const;
+    string getpole() const;
 
     /*!
-     *  \brief Rentre le nom du pole
-     *
-     *  Methode qui permet de rentrer le nom du pole du membre
-     *
-     *  \param p : le nom du pole
-     */
-
-    void setNom(std::string p);
+ *  \brief Change le nom du pole
+ *
+ *  Methode qui permet de modifier et de retourner le nom du pole du membre
+ *
+ *  \return un str qui est le nom du pole
+ */
+    string setpole(string p_pole) const;
 
     /*!
-     *  \brief Donne la liste des attributs
+ *  \brief Donne le nom du membre
+ *
+ *  Methode qui permet de retourner le nom du membre
+ *
+ *  \return un str qui est le nom du membre
+ */
+    string getNom() const;
+
+
+    /*!
+     *  \brief Rentre le nom du membre
      *
-     *  Methode qui permet de retourner la liste des attributs du consultant
+     *  Methode qui permet de rentrer le nom du membre
      *
-     *  \return un std::list<string qui est la liste des attribus du consultant
+     *  \param p : le nom du membre
      */
-//    std::list<std::string> getAttribut() const;
+
+    void setNom(string p_nom);
+
+    /*!
+*  \brief Donne le prénom du membre
+*
+*  Methode qui permet de retourner le prénom du membre
+*
+*  \return un str qui est le prénom du membre
+*/
+    string getPrenom() const;
+
+
+    /*!
+     *  \brief Rentre le prénom du membre
+     *
+     *  Methode qui permet de rentrer le prénom du membre
+     *
+     *  \param p : le prénom du membre
+     */
+
+    void setPrenom(string p_prenom);
+
+    /*!
+   *  \brief Donne le mail du membre
+   *
+   *  Methode qui permet de retourner le mail du membre
+   *
+   *  \return un str qui est le mail du membre
+   */
+    string getMail() const;
+
+
+    /*!
+     *  \brief Rentre le mail du membre
+     *
+     *  Methode qui permet de rentrer le mail du membre
+     *
+     *  \param p : le mail du membre
+     */
+
+    void setMail(string p_mail);
+
+    /*!
+*  \brief Donne le département du membre
+*
+*  Methode qui permet de retourner le département du membre
+*
+*  \return un str qui est le département du membre
+*/
+    string getDepartement() const;
+
+
+    /*!
+     *  \brief Rentre le département du membre
+     *
+     *  Methode qui permet de rentrer le département du membre
+     *
+     *  \param p : le département du membre
+     */
+
+    void setDepartement(string p_departement);
 
     bool operator == (const Membre obj1)
     {

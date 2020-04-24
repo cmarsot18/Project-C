@@ -17,10 +17,7 @@ class Personne {
 	protected:
 		std::string nom;
 		std::string prenom;
-		int age;
-		std::string adresse;
 		std::string mail;
-		int annee;
 		std::string departement;
 		
 }; 
