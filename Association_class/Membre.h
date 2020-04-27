@@ -18,7 +18,7 @@ using namespace std;
    *  La classe est heritee de la classe Personne qui definit plus prondement les attributs d une personne
    */
 
-class Membre : private Personne {
+class Membre : public Personne {
     string pole;/*!< definition de type de pole*/
 
 public:

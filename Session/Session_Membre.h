@@ -14,7 +14,7 @@
 
 #include <iostream>
 #include <string>
-#include "Membre.h"
+#include "../Association_class/Membre.h"
 #include "Session_Consultant.h"
 
 /*!
@@ -23,7 +23,7 @@
  * Elle permet aux membres de cunsulter leur fiche ainsi que celle de l'association et donc hérite de session consultant
  */
 
-class Session_Membre {
+class Session_Membre::public Session_Consultant {
 private :
     Membre personne;
 public:

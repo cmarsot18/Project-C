@@ -3,6 +3,7 @@
 //
 
 #include "TestSessionConsultant.h"
+#include "Consultant.h"
 /*
 #include <algorithm>
 #include <iterator>
@@ -25,7 +26,7 @@ TestSessionConsultant::~TestSessionConsultant(){
  * setUp: function called before each test
  */
 void TestSessionConsultant::setUp() {
-    consultant = ;
+    Consultant consultant = new Consultant() ;
 }
 
 /**

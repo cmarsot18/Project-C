@@ -8,7 +8,7 @@
 
 #include "../Test/TestUnit.h"
 #include "CollecteurCSV.hpp"
-#include "Membre.h"
+#include "../Association_class/Membre.h"
 #include "../Association_class/Association.hpp"
 
 using namespace std;

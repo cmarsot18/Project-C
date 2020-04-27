@@ -3,8 +3,8 @@
 
 #include <string>
 #include "CollecteurDonnees.hpp"
-#include "Association.hpp"
-#include "Membre.h"
+#include "../Association_class/Association.hpp"
+#include "../Association_class/Membre.h"
 
 
 /*!

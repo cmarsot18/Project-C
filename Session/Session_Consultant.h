@@ -15,8 +15,8 @@
 #include <iostream>
 #include <string>
 #include "Session.h"
-#include "Consultant.h"
-#include "Personne.hpp"
+#include "../Association_class/Consultant.h"
+#include "../Association_class/Personne.hpp"
 
 /*!
  * \Class Session_Consultant
@@ -26,10 +26,10 @@
 
 class Session_Consultant : public Session {
 public:
-    void setConsultant(const Personne);
+    void setConsultant(const Consultant);
     Personne getConsultant() const;
     Session_Consultant();
-    Session_Consultant(const Personne);
+    Session_Consultant(const Consultant);
     virtual ~Session_Consultant();
 
     /*!

@@ -1,7 +1,7 @@
 #ifndef RENDUDONNEES_H
 #define RENDUDONNEES_H
 
-#include "Personne.hpp"
+#include "../Association_class/Personne.hpp"
 
 /*!
  * \file RenduDonnees.hpp
