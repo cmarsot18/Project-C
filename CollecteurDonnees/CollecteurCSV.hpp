@@ -4,6 +4,8 @@
 #include <string>
 #include "CollecteurDonnees.hpp"
 #include "Association.hpp"
+#include "Membre.h"
+
 
 /*!
 *\file CollecteurCSV.hpp
@@ -32,5 +34,11 @@ class CollecteurCSV {
     * Permet de mettre à jour la liste des membres de l'association contenu dans un fichier texte    */
         static void MAJMembres(std::string pathTxt);
 
-    };
+
+
+
+
+
+
+};
 #endif

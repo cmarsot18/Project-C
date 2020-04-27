@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <bits/stdc++.h>
+#include <list>
 
 #include "../Test/TestUnit.h"
 #include "CollecteurCSV.hpp"
@@ -64,7 +65,13 @@ public:
     * Il fait vérifier l'assertion 0==1, pour vérifier qu'il y a bien une erreur
     */
     TEST_DECL(fail);
+
+    static bool inferieur (const Membre obj1, const Membre obj2)
+    {
+        return (obj1.getNom() < obj2.getNom());
+    }
 };
+
 
 
 #endif
