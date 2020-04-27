@@ -35,7 +35,8 @@ public:
      * \brief Permet l'ajout d'administrateur
      * permet de changer la session choisie en session administrateur
      */
-    void Session_Admin(Membre pMembre);
+    Session_Admin(Membre pMembre);
+    virtual ~Session_Admin();
 };
 
 
