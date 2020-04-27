@@ -27,11 +27,6 @@
 class Session_Admin : public Session_Membre{
 public:
     /*!
-     * \ Méthode Entrer_données
-     * Permet d'entrer les donnees à partir d'un fichier dont on entre le chemin
-     */
-    void Entrer_donnees(std::string path);
-    /*!
      * \brief Affiche une fiche
      * Affiche la fiche du membre ciblé
      */
@@ -40,7 +35,7 @@ public:
      * \brief Permet l'ajout d'administrateur
      * permet de changer la session choisie en session administrateur
      */
-    void Ajouter_admin(Session pSession);
+    void Session_Admin(Membre pMembre);
 };
 
 
