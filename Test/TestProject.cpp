@@ -5,6 +5,8 @@
 #include "../Association_class/TestMembre.h"
 #include "../Session/TestSession.h"
 #include "../Session/TestSessionConsultant.h"
+#include "../Session/TestSessionMembre.h"
+#include "../Session/TestSessionAdmin.h"
 #include "../CollecteurDonnees/TestCollecteurCSV.h"
 
 int main(int argc, char *argv[]) {
