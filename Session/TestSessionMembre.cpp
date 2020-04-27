@@ -25,7 +25,7 @@ TestSessionMembre::~TestSessionMembre(){
  * setUp: function called before each test
  */
 void TestSessionMembre::setUp() {
-    Membre membre;
+    membre = Membre( "Devco", "Fiche", "Guenole");
 }
 
 /**
