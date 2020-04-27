@@ -49,7 +49,7 @@ void TestConsultant::test_Consultant() {
 /**
  * Test that will fail, used for example purpose
  */
-    void TestAssociation::test_fail() {
+    void TestConsultant::test_fail() {
         CPPUNIT_ASSERT(0 == 1);
     }
 

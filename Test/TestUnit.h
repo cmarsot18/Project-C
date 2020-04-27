@@ -21,6 +21,8 @@ using namespace std;
 		&TestAssociation::test_##name));
     suite->addTest(new CppUnit::TestCaller<TestSession>("test_"#name, \
 		&TestSession::test_##name));
+    suite->addTest(new CppUnit::TestCaller<TestCollecteurCSV>("test_"#name, \
+		&TestCollecteurCSV::test_##name));
     //suite->addTest(new CppUnit::TestCaller<TestSessionConsultant>("test_"#name, \
 		&TestConsultantSession::test_##name));
 

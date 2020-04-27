@@ -3,6 +3,7 @@
 
 #include <string>
 #include "CollecteurDonnees.hpp"
+#include "Association.hpp"
 
 /*!
 *\file CollecteurCSV.hpp
@@ -16,26 +17,20 @@
 class CollecteurCSV {
 
     private :
-    std::string path;
+    std::string pathCSV;
+    std::string pathTxt;
         
     public :
     /*!
-    * \brief Génération d'un membre
-    * Permet de collecter les données d'un membre à partir de son nom et de son prénom
+    * \brief Chargement du fichier
+    * Permet à partir de son chemin de récupérer le fichier CSV contenant les réponses des membres
     */
-        static void Generer_membre( std::string  Nom,  std::string  Prenom);
+        static void Chargement(std::string pathCSV);
 
     /*!
-    * \brief Génération des membres
-    * Permet de collecter les données de tous les membres
-    */
-        static void Generer_membres();
+    * \brief Mise à jour des membres
+    * Permet de mettre à jour la liste des membres de l'association contenu dans un fichier texte    */
+        static void MAJMembres(std::string pathTxt);
 
-
-    /*!
-    * \brief Génération de l'association
-    * Permet de collecter les données de l'association en général
-    */
-         static void Generer_Association();
-};
+    };
 #endif
