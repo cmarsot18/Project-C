@@ -29,8 +29,8 @@ class TestSessionAdmin : public CppUnit::TestFixture {
 private:
     Personne Membre;
 public:
-    Session_Admin();
-    virtual ~Session_Admin();
+    TestSessionAdmin();
+    virtual ~TestSessionAdmin();
 
     void setUp();
     void tearDown();

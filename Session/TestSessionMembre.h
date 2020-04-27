@@ -28,8 +28,8 @@ class TestSessionMembre : public CppUnit::TestFixture {
 private:
     Personne Membre;
 public:
-    Session_Membre();
-    virtual ~Session_Membre();
+    TestSessionMembre();
+    virtual ~TestSessionMembre();
 
     void setUp();
     void tearDown();

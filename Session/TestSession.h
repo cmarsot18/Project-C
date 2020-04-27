@@ -17,6 +17,9 @@
 
 using namespace std;
 #define CLASS_NAME_STRING "Session"
+#define TEST_ADD_SESSION(name) \
+	suite->addTest(new CppUnit::TestCaller<TestSession>("test_"#name, \
+		&TestSession::test_##name));
 
 /*!
  * \Class TestSession
@@ -26,8 +29,10 @@ using namespace std;
 
 class TestSession : public CppUnit::TestFixture {
 private:
-    std::string ID;
-    std::string Pass;
+    string ID1;
+    string Pass1;
+    string ID2;
+    string Pass2;
 public:
 
     TestSession();

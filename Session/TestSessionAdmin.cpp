@@ -45,7 +45,7 @@ void TestSessionAdmin::TestSessionAdmin() {
     CPPUNIT_ASSERT(C1->getMembre() == Membre);
 }
 
-void TestSessionMembre::test_Consulter_ficheAsso() {
+void TestSessionAdmin::test_Consulter_ficheAsso() {
     Session_Admin * C1 = new Session_Admin( Membre );
     Membre test = new Membre();
     C1->Consulter_fiche(test);

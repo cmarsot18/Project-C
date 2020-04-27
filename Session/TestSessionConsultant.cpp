@@ -39,7 +39,7 @@ void TestSessionConsultant::tearDown() {
  * sum i=1,size of v[i] which is supposed to be
  * equal to size*(size+1)/2
  */
-void TestSessionConsultant::TestSessionConsultant() {
+    TestSessionConsultant::Session_Consultant() {
     // vector has been filled by method 'setUp'
     Session_Consultant * C1 = new Session_Consultant( consultant );
 

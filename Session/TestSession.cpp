@@ -20,10 +20,10 @@ TestSession::~TestSession(){
  * setUp: function called before each test
  */
 void TestSession::setUp() {
-    ID = "nom.prenom";
-    Pass = "mdp";
+    ID1 = "nom.prenom";
+    Pass1 = "mdp";
     ID2 = "nom2.prenom2";
-    Pass = "mdp2";
+    Pass2 = "mdp2";
 }
 
 /**
@@ -39,19 +39,19 @@ void TestSession::tearDown() {
  */
 void TestSession::test_Session() {
     // vector has been filled by method 'setUp'
-    Session * S1 = new Session( ID, Pass );
+    Session * S1 = new Session( ID1, Pass1 );
 
-    CPPUNIT_ASSERT(S1->getID() == ID);
-    CPPUNIT_ASSERT(S1->getPass() == Pass);
+    CPPUNIT_ASSERT(S1->getID() == ID1);
+    CPPUNIT_ASSERT(S1->getPass() == Pass1);
 }
 
 void TestSession::test_Connection() {
-    Session * S1 = new Session( ID, Pass );
-    S1->(Connection(ID,Pass));
-    CPPUNIT_ASSERT(S1->Connection(ID1,Pass1) == TRUE);
-    CPPUNIT_ASSERT(S1->Connection(ID1,Pass2) == FALSE);
-    CPPUNIT_ASSERT(S1->Connection(ID2,Pass1) == FALSE);
-    CPPUNIT_ASSERT(S1->Connection(ID2,Pass2) == FALSE);
+    Session * S1 = new Session( ID1, Pass1 );
+    S1->Connection(ID1,Pass1);
+    CPPUNIT_ASSERT(S1->Connection(ID1,Pass1) == true);
+    CPPUNIT_ASSERT(S1->Connection(ID1,Pass2) == false);
+    CPPUNIT_ASSERT(S1->Connection(ID2,Pass1) == false);
+    CPPUNIT_ASSERT(S1->Connection(ID2,Pass2) == false);
 }
 
 /**
@@ -72,9 +72,9 @@ CppUnit::TestSuite * TestSession::make_suite() {
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;
 
-    TEST_ADD(Session);
-    TEST_ADD(Connection);
-    TEST_ADD(fail);
+    TEST_ADD_SESSION(Session);
+    TEST_ADD_SESSION(Connection);
+    TEST_ADD_SESSION(fail);
 
     return suite;
 }
