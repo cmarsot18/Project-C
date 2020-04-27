@@ -10,7 +10,7 @@
 
 using namespace std;
 
-#define CLASS_NAME_STRING "Association"
+
 #define TEST_ADD_ASSOCIATION(name) \
 	suite->addTest(new CppUnit::TestCaller<TestAssociation>("test_"#name, \
 		&TestAssociation::test_##name));

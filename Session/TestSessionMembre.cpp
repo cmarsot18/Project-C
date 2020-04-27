@@ -25,7 +25,7 @@ TestSessionMembre::~TestSessionMembre(){
  * setUp: function called before each test
  */
 void TestSessionMembre::setUp() {
-    Personne Membre;
+    Membre membre;
 }
 
 /**
@@ -39,11 +39,11 @@ void TestSessionMembre::tearDown() {
  * sum i=1,size of v[i] which is supposed to be
  * equal to size*(size+1)/2
  */
-void TestSessionMembre::TestSessionMembre() {
+void TestSessionMembre::test_Session_Membre() {
     // vector has been filled by method 'setUp'
-    Session_Membre * C1 = new Session_Membre( Membre );
+    Session_Membre * C1 = new Session_Membre( membre );
 
-    CPPUNIT_ASSERT(C1->getMembre() == Membre);
+    CPPUNIT_ASSERT(C1->getMembre() == membre);
 }
 
 void TestSessionMembre::test_Consulter_ficheAsso() {
@@ -65,14 +65,14 @@ void TestSessionMembre::test_fail() {
  *
  */
 CppUnit::TestSuite * TestSessionMembre::make_suite() {
-    CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
+    CppUnit::TestSuite *suite = new CppUnit::TestSuite("SessionMembre");
     cout << "==============================================" << endl;
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;
 
-    TEST_ADD(Session_Membre);
-    TEST_ADD(Consulter_ficheAsso);
-    TEST_ADD(fail);
+    TEST_ADD_SESSION_MEMBRE(Session_Membre);
+    TEST_ADD_SESSION_MEMBRE(Consulter_ficheAsso);
+    TEST_ADD_SESSION_MEMBRE(fail);
 
     return suite;
 }

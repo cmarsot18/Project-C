@@ -110,7 +110,7 @@ void TestCollecteurCSV::test_fail() {
 
 
 CppUnit::TestSuite * TestCollecteurCSV::make_suite() {
-    CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
+    CppUnit::TestSuite *suite = new CppUnit::TestSuite("CollecteurCSV");
     cout << "==============================================" << endl;
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;

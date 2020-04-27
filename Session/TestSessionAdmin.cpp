@@ -65,14 +65,14 @@ void TestSessionAdmin::test_fail() {
  *
  */
 CppUnit::TestSuite * TestSessionAdmin::make_suite() {
-    CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
+    CppUnit::TestSuite *suite = new CppUnit::TestSuite("SessionAdmin");
     cout << "==============================================" << endl;
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;
 
-    TEST_ADD(Session_Admin);
-    TEST_ADD(Consulter_fiche);
-    TEST_ADD(fail);
+    TEST_ADD_SESSION_ADMIN(Session_Admin);
+    TEST_ADD_SESSION_ADMIN(Consulter_fiche);
+    TEST_ADD_SESSION_ADMIN(fail);
 
     return suite;
 }

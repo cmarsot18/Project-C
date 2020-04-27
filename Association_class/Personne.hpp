@@ -19,7 +19,13 @@ class Personne {
 		std::string prenom;
 		std::string mail;
 		std::string departement;
-		
+
+public :
+    bool operator == (const Personne obj1)
+    {
+        return (this->nom == obj1.nom
+                && this->prenom == obj1.prenom);
+    }
 }; 
 
 #endif // PERSONNE_H

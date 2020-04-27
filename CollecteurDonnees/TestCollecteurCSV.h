@@ -13,7 +13,7 @@
 
 using namespace std;
 
-#define CLASS_NAME_STRING "CollecteurCSV"
+
 #define TEST_ADD_COLLECTEURCSV(name) \
 	suite->addTest(new CppUnit::TestCaller<TestCollecteurCSV>("test_"#name, \
 		&TestCollecteurCSV::test_##name));

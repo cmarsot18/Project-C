@@ -16,6 +16,9 @@
  */
 
 using namespace std;
+#define TEST_ADD_SESSION_CONSULTANT(name) \
+	suite->addTest(new CppUnit::TestCaller<TestSessionConsultant>("test_"#name, \
+		&TestSessionConsultant::test_##name));
 
 /*!
  * \Class TestSessionConsultant

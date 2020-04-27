@@ -16,7 +16,9 @@
  */
 
 using namespace std;
-#define CLASS_NAME_STRING "Session_Membre"
+#define TEST_ADD_SESSION_MEMBRE(name) \
+	suite->addTest(new CppUnit::TestCaller<TestSessionMembre>("test_"#name, \
+		&TestSessionMembre::test_##name));
 
 /*!
  * \Class TestSessionMembre
@@ -26,7 +28,7 @@ using namespace std;
 
 class TestSessionMembre : public CppUnit::TestFixture {
 private:
-    Personne Membre;
+    Membre membre;
 public:
     TestSessionMembre();
     virtual ~TestSessionMembre();

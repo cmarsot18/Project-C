@@ -85,7 +85,7 @@ void TestAssociation::test_fail() {
  *
  */
 CppUnit::TestSuite * TestAssociation::make_suite() {
-    CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
+    CppUnit::TestSuite *suite = new CppUnit::TestSuite("Association");
     cout << "==============================================" << endl;
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;

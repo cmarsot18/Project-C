@@ -39,7 +39,7 @@ void TestSessionConsultant::tearDown() {
  * sum i=1,size of v[i] which is supposed to be
  * equal to size*(size+1)/2
  */
-    TestSessionConsultant::Session_Consultant() {
+void TestSessionConsultant::test_Session_Consultant() {
     // vector has been filled by method 'setUp'
     Session_Consultant * C1 = new Session_Consultant( consultant );
 
@@ -55,7 +55,7 @@ void TestSessionConsultant::test_Consulter_fiche() {
 /**
  * Test that will fail, used for example purpose
  */
-void TestAssociation::test_fail() {
+void TestSessionConsultant::test_fail() {
     CPPUNIT_ASSERT(0 == 1);
 }
 
@@ -70,9 +70,9 @@ CppUnit::TestSuite * TestSessionConsultant::make_suite() {
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;
 
-    TEST_ADD(Session_Consultant);
-    TEST_ADD(Consulter_fiche);
-    TEST_ADD(fail);
+    TEST_ADD_SESSION_CONSULTANT(Session_Consultant);
+    TEST_ADD_SESSION_CONSULTANT(Consulter_fiche);
+    TEST_ADD_SESSION_CONSULTANT(fail);
 
     return suite;
 }

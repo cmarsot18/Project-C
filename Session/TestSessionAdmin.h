@@ -17,7 +17,9 @@
  */
 
 using namespace std;
-#define CLASS_NAME_STRING "Session_Admin"
+#define TEST_ADD_SESSION_ADMIN(name) \
+	suite->addTest(new CppUnit::TestCaller<TestSessionAdmin>("test_"#name, \
+		&TestSessionAdmin::test_##name));
 
 /*!
  * \Class TestSessionAdmin
