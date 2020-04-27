@@ -8,6 +8,7 @@
 
 #include "../Test/TestUnit.h"
 #include "CollecteurCSV.hpp"
+#include "Membre.h"
 #include "../Association_class/Association.hpp"
 
 using namespace std;
@@ -66,10 +67,7 @@ public:
     */
     TEST_DECL(fail);
 
-    static bool inferieur (const Membre obj1, const Membre obj2)
-    {
-        return (obj1.getNom() < obj2.getNom());
-    }
+
 };
 
 

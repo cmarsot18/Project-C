@@ -155,6 +155,11 @@ public:
                 && this->prenom == obj1.prenom);
     }
 
+    bool operator < (const Membre obj1)
+    {
+        return (this->nom < obj1.getNom());
+    }
+
 };
 
 #endif // MEMBRE_H
