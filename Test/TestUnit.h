@@ -16,11 +16,8 @@ using namespace std;
 
 
 #define TEST_DECL(x) void test_##x()
-<<<<<<< HEAD
 
 
-
-=======
 #define TEST_ADD(name) \
 	suite->addTest(new CppUnit::TestCaller<TestAssociation>("test_"#name, \
 		&TestAssociation::test_##name));
@@ -34,6 +31,6 @@ using namespace std;
 		&TestSessionMembre::test_##name));
     //suite->addTest(new CppUnit::TestCaller<TestSessionConsultant>("test_"#name, \
 		&TestConsultantSession::test_##name));
->>>>>>> Corentin 20/04
+
 
 #endif /* TEST_UNIT_H */
