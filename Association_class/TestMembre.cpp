@@ -39,16 +39,16 @@ void TestMembre::tearDown() {
  */
 void TestMembre::test_Membre() {
     // vector has been filled by method 'setUp'
-    Membre * membre = new Membre(pole, nom, prenom );
+    Membre *membre = new Membre(pole, nom, prenom);
     CPPUNIT_ASSERT(membre->getNom() == nom);
     CPPUNIT_ASSERT(membre->getpole() == pole);
     CPPUNIT_ASSERT(membre->getPrenom() == prenom);
 
-    CPPUNIT_ASSERT_THROW(Membre * membre2 = new Membre( nom, prenom ) , exception);
+    CPPUNIT_ASSERT_THROW(Membre *membre2 = new Membre(pole, nom, prenom), exception);
 
-    CPPUNIT_ASSERT_THROW(Membre * membre3 = new Membre( "" , prenom ) , exception);
+    CPPUNIT_ASSERT_THROW(Membre *membre3 = new Membre(pole, "", prenom), exception);
 
-
+}
 
 /**
  * Test that will fail, used for example purpose
@@ -63,34 +63,15 @@ void TestMembre::test_Membre() {
  *
  */
     CppUnit::TestSuite * TestMembre::make_suite() {
-        CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
+        CppUnit::TestSuite *suite = new CppUnit::TestSuite("Membre");
         cout << "==============================================" << endl;
         cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
         cout << "==============================================" << endl;
 
-        TEST_ADD(Membre);
-        TEST_ADD(fail);
+        TEST_ADD_MEMBRE(Membre);
+        TEST_ADD_MEMBRE(fail);
 
         return suite;
     }
 
-/**
- * main function
- */
-
-    int main(int argc, char *argv[]) {
-        CppUnit::TextUi::TestRunner runner;
-
-        // create suite
-        CppUnit::TestSuite *suite = make_suite();
-        runner.addTest(suite);
-
-        // set output format as text
-        runner.setOutputter(new CppUnit::CompilerOutputter(&runner.result(), cout));
-
-        // run all tests
-        runner.run();
-
-        return 0;
-    }
 

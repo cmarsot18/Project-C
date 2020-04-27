@@ -10,9 +10,13 @@
 #include "../Test/TestUnit.h"
 
 
+
+
 using namespace std;
 
-#define CLASS_NAME_STRING "Consultant"
+#define TEST_ADD_CONSULTANT(name) \
+	suite->addTest(new CppUnit::TestCaller<TestConsultant>("test_"#name, \
+		&TestConsultant::test_##name));
 
 /*!
  * \Class TestConsultant

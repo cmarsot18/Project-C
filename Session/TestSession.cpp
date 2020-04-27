@@ -67,7 +67,7 @@ void TestSession::test_fail() {
  *
  */
 CppUnit::TestSuite * TestSession::make_suite() {
-    CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
+    CppUnit::TestSuite *suite = new CppUnit::TestSuite("Session");
     cout << "==============================================" << endl;
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;

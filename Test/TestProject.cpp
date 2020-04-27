@@ -2,21 +2,22 @@
  * main function
  */
 #include "../Association_class/TestAssociation.h"
+#include "../Association_class/TestMembre.h"
 #include "../Session/TestSession.h"
 #include "../Session/TestSessionConsultant.h"
 #include "../CollecteurDonnees/TestCollecteurCSV.h"
 
 int main(int argc, char *argv[]) {
-//  TestMembre testMembre;
+    TestMembre testMembre;
     TestAssociation testAssociation;
     TestSession testSession;
     TestCollecteurCSV testCollecteurCsv;
 
-//  TestSessionConsultant testSessionConsultant;
+    TestSessionConsultant testSessionConsultant;
     CppUnit::TextUi::TestRunner runner;
 
-//    CppUnit::TestSuite *membreSuite = testMembre.make_suite();
-//    runner.addTest(membreSuite);
+    CppUnit::TestSuite *membreSuite = testMembre.make_suite();
+    runner.addTest(membreSuite);
 
     // create suite
     CppUnit::TestSuite *associationSuite = testAssociation.make_suite();
@@ -31,8 +32,8 @@ int main(int argc, char *argv[]) {
     runner.addTest(CSVSuite);
 
     // create suite
-    //CppUnit::TestSuite *sessionconsultantSuite = testSessionConsultant.make_suite();
-    //runner.addTest(sessionconsultantSuite);
+    CppUnit::TestSuite *sessionconsultantSuite = testSessionConsultant.make_suite();
+    runner.addTest(sessionconsultantSuite);
 
     // set output format as text
     runner.setOutputter(new CppUnit::CompilerOutputter(&runner.result(), cout));

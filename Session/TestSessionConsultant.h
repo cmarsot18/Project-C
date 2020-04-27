@@ -16,7 +16,6 @@
  */
 
 using namespace std;
-#define CLASS_NAME_STRING "Session_Consultant"
 
 /*!
  * \Class TestSessionConsultant
@@ -28,8 +27,8 @@ class TestSessionConsultant : public CppUnit::TestFixture {
 private:
     Personne consultant;
 public:
-    Session_Consultant();
-    virtual ~Session_Consultant();
+    TestSessionConsultant();
+    virtual ~TestSessionConsultant();
 
     void setUp();
     void tearDown();

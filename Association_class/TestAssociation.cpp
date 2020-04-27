@@ -90,10 +90,10 @@ CppUnit::TestSuite * TestAssociation::make_suite() {
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;
 
-    TEST_ADD(Association);
-    TEST_ADD(ajouterMembre);
-    TEST_ADD(supprimerMembre);
-    TEST_ADD(fail);
+    TEST_ADD_ASSOCIATION(Association);
+    TEST_ADD_ASSOCIATION(ajouterMembre);
+    TEST_ADD_ASSOCIATION(supprimerMembre);
+    TEST_ADD_ASSOCIATION(fail);
 
     return suite;
 }
@@ -101,7 +101,7 @@ CppUnit::TestSuite * TestAssociation::make_suite() {
 /**
  * main function
  */
-
+/*
 int main(int argc, char *argv[]) {
     CppUnit::TextUi::TestRunner runner;
 
@@ -117,4 +117,4 @@ int main(int argc, char *argv[]) {
 
      return 0;
 }
-
+*/

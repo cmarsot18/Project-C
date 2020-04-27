@@ -37,14 +37,14 @@ void TestConsultant::tearDown() {
  */
 void TestConsultant::test_Consultant() {
     // vector has been filled by method 'setUp'
-    Consultant * consultant = new Consultant(mission, nom, prenom);
+    Consultant *consultant = new Consultant(mission, nom, prenom);
     CPPUNIT_ASSERT(consultant->getMission() == mission);
 
-    CPPUNIT_ASSERT_THROW(Consultant * consultant2 = new Consultant( mission, nom, prenom ) , exception);
+    CPPUNIT_ASSERT_THROW(Consultant *consultant2 = new Consultant(mission, nom, prenom), exception);
 
-    CPPUNIT_ASSERT_THROW(Consultant * consultant3 = new Consultant( "" , nom, prenom ) , exception);
+    CPPUNIT_ASSERT_THROW(Consultant *consultant3 = new Consultant("", nom, prenom), exception);
 
-
+}
 
 /**
  * Test that will fail, used for example purpose
@@ -59,35 +59,15 @@ void TestConsultant::test_Consultant() {
  *
  */
     CppUnit::TestSuite * TestConsultant::make_suite() {
-        CppUnit::TestSuite *suite = new CppUnit::TestSuite(CLASS_NAME_STRING);
+        CppUnit::TestSuite *suite = new CppUnit::TestSuite("Consultant");
         cout << "==============================================" << endl;
         cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
         cout << "==============================================" << endl;
 
-        TEST_ADD(Consultant);
-        TEST_ADD(fail);
+        TEST_ADD_CONSULTANT(Consultant);
+        TEST_ADD_CONSULTANT(fail);
 
         return suite;
-    }
-
-/**
- * main function
- */
-
-    int main(int argc, char *argv[]) {
-        CppUnit::TextUi::TestRunner runner;
-
-        // create suite
-        CppUnit::TestSuite *suite = make_suite();
-        runner.addTest(suite);
-
-        // set output format as text
-        runner.setOutputter(new CppUnit::CompilerOutputter(&runner.result(), cout));
-
-        // run all tests
-        runner.run();
-
-        return 0;
     }
 
 

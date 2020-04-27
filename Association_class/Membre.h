@@ -67,7 +67,7 @@ public:
  *
  *  \return un str qui est le nom du pole
  */
-    string setpole(string p_pole) const;
+    void setpole(string p_pole) ;
 
     /*!
  *  \brief Donne le nom du membre

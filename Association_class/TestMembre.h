@@ -11,8 +11,9 @@
 
 
 using namespace std;
-
-#define CLASS_NAME_STRING "Membre"
+#define TEST_ADD_MEMBRE(name) \
+	suite->addTest(new CppUnit::TestCaller<TestMembre>("test_"#name, \
+		&TestMembre::test_##name));
 
 /*!
  * \Class TestMembre
