@@ -157,7 +157,7 @@ public:
 
     bool operator < (const Membre obj1)
     {
-        return (this->nom < obj1.getNom());
+        return (this->nom < obj1.nom);
     }
 
 };
