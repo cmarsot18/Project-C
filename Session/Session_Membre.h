@@ -30,7 +30,7 @@ public:
     void setMembre(const Personne);
     Personne getMembre() const;
     Session_Membre();
-    Session_Membre(const Personne);
+    Session_Membre(const Membre);
     virtual ~Session_Membre();
 /*!
 * \brief affiche la fiche asso
