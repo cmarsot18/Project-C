@@ -115,36 +115,10 @@ CppUnit::TestSuite * TestCollecteurCSV::make_suite() {
     cout << "TEST " << suite->getName() << " (" << __FILE__ << ")" << endl;
     cout << "==============================================" << endl;
 
-    TEST_ADD(Chargement);
-    TEST_ADD(MAJMembres);
-    TEST_ADD(fail);
+    TEST_ADD_COLLECTEURCSV(Chargement);
+    TEST_ADD_COLLECTEURCSV(MAJMembres);
+    TEST_ADD_COLLECTEURCSV(fail);
 
     return suite;
 }
-
-
-/**
- * main function
- */
-
-int main(int argc, char *argv[]) {
-    CppUnit::TextUi::TestRunner runner;
-
-    // create suite
-    CppUnit::TestSuite *suite = make_suite();
-    runner.addTest(suite);
-
-    // set output format as text
-    runner.setOutputter(new CppUnit::CompilerOutputter(&runner.result(), cout));
-
-    // run all tests
-    runner.run();
-
-    return 0;
-}
-
-
-
-}
-
 
