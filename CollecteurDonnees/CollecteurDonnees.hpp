@@ -14,25 +14,22 @@
 */
 
 class CollecteurDonnees {
-    public :
 
+private :
+    std::string path1;
+    std::string path2;
+
+public :
     /*!
-     * \brief Génération d'un membre
-     * Permet de collecter les données d'un membre à partir de son nom et de son prénom
-     */
-        virtual void Generer_membre(std::string Nom, std::string Prenom) =0;
-
-
-    /*!
-    * \brief Génération des membres
-    * Permet de collecter les données de tous les membres
+    * \brief Chargement du fichier
+    * Permet à partir de son chemin de récupérer le fichier contenant les réponses des membres
     */
-        virtual void Generer_membres() =0;
+    virtual void Chargement(std::string path1) =0;
 
     /*!
-    * \brief Génération de l'association
-    * Permet de collecter les données de l'association en général
-    */
-        virtual void Generer_Association() =0;
+    * \brief Mise à jour des membres
+    * Permet de mettre à jour la liste des membres de l'association contenu dans un fichier     */
+    virtual void MAJMembres(std::string path2) =0;
+
 };
 #endif

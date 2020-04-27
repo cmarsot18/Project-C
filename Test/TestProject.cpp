@@ -4,11 +4,14 @@
 #include "../Association_class/TestAssociation.h"
 #include "../Session/TestSession.h"
 #include "../Session/TestSessionConsultant.h"
+#include "../CollecteurDonnees/TestCollecteurCSV.h"
 
 int main(int argc, char *argv[]) {
 //  TestMembre testMembre;
     TestAssociation testAssociation;
     TestSession testSession;
+    TestCollecteurCSV testCollecteurCsv;
+
 //  TestSessionConsultant testSessionConsultant;
     CppUnit::TextUi::TestRunner runner;
 
@@ -22,6 +25,10 @@ int main(int argc, char *argv[]) {
     // create suite
     CppUnit::TestSuite *sessionSuite = testSession.make_suite();
     runner.addTest(sessionSuite);
+
+    //create suite
+    CppUnit::TestSuite *CSVSuite = testCollecteurCsv.make_suite();
+    runner.addTest(CSVSuite);
 
     // create suite
     //CppUnit::TestSuite *sessionconsultantSuite = testSessionConsultant.make_suite();

@@ -29,7 +29,10 @@ private:
     std::string ID;
     std::string Pass;
 public:
-    TestSession(const std::string,const std::string);
+
+    TestSession();
+
+    virtual ~TestSession();
 
     void setUp();
     void tearDown();
