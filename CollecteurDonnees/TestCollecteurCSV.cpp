@@ -92,23 +92,13 @@ void TestCollecteurCSV::test_MAJMembres() {
 
     string ligne;
     while(getline(txt,ligne)) {
-
-
+        // à remplir, spliter la ligne pour remplir le vecteur de membre vm2
     };
     sort(vm2.begin(),vm2.end());
 
-    CPPUNIT_ASSERT(vm1 == vm2);
+    CPPUNIT_ASSERT(vm1 == vm2); // compare les 2 vecteurs
     }
 
-
-
-
-    }
-
-
-
-
-}
 
 void TestCollecteurCSV::test_fail() {
         CPPUNIT_ASSERT(0 == 1); }
