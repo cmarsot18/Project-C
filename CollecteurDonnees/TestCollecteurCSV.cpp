@@ -85,7 +85,7 @@ void TestCollecteurCSV::test_MAJMembres() {
     CPPUNIT_ASSERT_THROW(count=0, exception); //si le fichier est vide
 
     csv.close();
-    sort(vm1.begin(),vm1.end(),<);
+    sort(vm1.begin(),vm1.end());
 
     ifstream txt("../liste.txt"); // ouverture TXT qui contient la liste des membres mise à jour
     vector<Membre> vm2;
