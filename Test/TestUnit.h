@@ -16,8 +16,24 @@ using namespace std;
 
 
 #define TEST_DECL(x) void test_##x()
+<<<<<<< HEAD
 
 
 
+=======
+#define TEST_ADD(name) \
+	suite->addTest(new CppUnit::TestCaller<TestAssociation>("test_"#name, \
+		&TestAssociation::test_##name));
+    suite->addTest(new CppUnit::TestCaller<TestSession>("test_"#name, \
+		&TestSession::test_##name));
+    suite->addTest(new CppUnit::TestCaller<TestCollecteurCSV>("test_"#name, \
+		&TestCollecteurCSV::test_##name));
+    suite->addTest(new CppUnit::TestCaller<TestSessionAdmin>("test_"#name, \
+		&TestSessionAdmin::test_##name));
+    suite->addTest(new CppUnit::TestCaller<TestSessionMembre>("test_"#name, \
+		&TestSessionMembre::test_##name));
+    //suite->addTest(new CppUnit::TestCaller<TestSessionConsultant>("test_"#name, \
+		&TestConsultantSession::test_##name));
+>>>>>>> Corentin 20/04
 
 #endif /* TEST_UNIT_H */
