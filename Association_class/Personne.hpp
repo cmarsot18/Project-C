@@ -21,6 +21,11 @@ class Personne {
 		std::string departement;
 
 public :
+    /*!
+   *  \brief Redéfinition de l'opérateur ==
+   *
+   *  Des personnes sont identiques si elles ont le même nom et le même prénom
+   */
     bool operator == (const Personne obj1)
     {
         return (this->nom == obj1.nom

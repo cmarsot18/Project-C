@@ -30,16 +30,35 @@ class TestSessionConsultant : public CppUnit::TestFixture {
 private:
     Consultant consultant;
 public:
+    /*!
+   *  \brief Constructeur de la classe TestSessionConsultant
+   */
     TestSessionConsultant();
+    /*!
+   *  \brief Destructeur de la classe TestSessionConsultant
+   */
     virtual ~TestSessionConsultant();
-
+/*!
+   *  \brief Création des éléments nécessaires aux tests
+   */
     void setUp();
+    /*!
+   *  \brief Libération de la mémoire
+   */
     void tearDown();
 
     CppUnit::TestSuite * make_suite();
-
+   /*!
+   *  \brief Test de la création d'une session consultant
+   */
     TEST_DECL(Session_Consultant);
+    /*!
+   *  \brief Test de la consultation d'une fiche
+   */
     TEST_DECL(Consulter_fiche);
+    /*!
+   *  \brief Test qui rate à chaque fois
+   */
     TEST_DECL(fail);
 };
 
