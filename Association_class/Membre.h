@@ -2,8 +2,8 @@
 #define MEMBRE_H
 
 /*!
- * \file Consultant.hpp
- * \brief Gestion d une association
+ * \file Membre.h
+ * \brief Definition d'un membre
  * \author groupe A4
  */
 #include <string>

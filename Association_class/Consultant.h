@@ -2,8 +2,8 @@
 #define CONSULTANT_H
 
 /*!
- * \file Consultant.hpp
- * \brief Gestion d une association
+ * \file Consultant.h
+ * \brief Definition d'un consultant
  * \author groupe A4
  */
 #include <string>
