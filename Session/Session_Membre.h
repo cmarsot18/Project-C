@@ -7,7 +7,7 @@
 
 /*!
  * \file Session_membre.h
- * \brief Definition d'une Session_Membre
+ * \brief Definition d'une session d'un Membre
  * \author Groupe A4
  * \version 0.1
  */

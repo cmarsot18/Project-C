@@ -7,7 +7,7 @@
 
 /*!
  * \file Session_Consultant.h
- * \brief Definition de la Session_Consultant
+ * \brief Definition de la session d'un Consultant
  * \author Groupe A4
  * \version 0.1
  */
