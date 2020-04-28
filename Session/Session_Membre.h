@@ -6,8 +6,8 @@
 #define PROJET_C_SESSION_MEMBRE_H
 
 /*!
- * \file Session_membre.hpp
- * \brief Definition d'une session d'un membre
+ * \file Session_membre.h
+ * \brief Definition d'une Session_Membre
  * \author Groupe A4
  * \version 0.1
  */

@@ -6,8 +6,8 @@
 #define PROJET_C_SESSION_CONSULTANT_H
 
 /*!
- * \file Session_Consultant.hpp
- * \brief Definition de la session consultant
+ * \file Session_Consultant.h
+ * \brief Definition de la Session_Consultant
  * \author Groupe A4
  * \version 0.1
  */

@@ -6,8 +6,8 @@
 #define PROJET_C_SESSION_H
 
 /*!
- * \file Session.hpp
- * \brief Definition d'une session
+ * \file Session.h
+ * \brief Definition d'une Session
  * \author Groupe A4
  * \version 0.1
  */

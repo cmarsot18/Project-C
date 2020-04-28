@@ -6,7 +6,7 @@
 #define PROJET_C_SESSION_ADMIN_H
 
 /*!
- * \file Session_Admin.hpp
+ * \file Session_Admin.h
  * \brief Definition de la session administrateur
  * \author Groupe A4
  * \version 0.1
