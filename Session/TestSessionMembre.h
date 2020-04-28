@@ -22,8 +22,8 @@ using namespace std;
 
 /*!
  * \Class TestSessionMembre
- * \brief Cette classe teste le bon fonctionnement d'une session associé à un Membre
- * Elle vérifie les méthodes (à l'exception des accesseurs)
+ * \brief Cette classe teste le bon fonctionnement d'une session associe à un Membre
+ * Elle verifie les methodes (à l'exception des accesseurs)
  */
 
 class TestSessionMembre : public CppUnit::TestFixture {
@@ -39,11 +39,11 @@ public:
    */
     virtual ~TestSessionMembre();
 /*!
-   *  \brief Création des éléments permettant de mettre en place les tests
+   *  \brief Creation des elements permettant de mettre en place les tests
    */
     void setUp();
     /*!
-   *  \brief On libère la mémoire une fois le test fini
+   *  \brief On libere la memoire une fois le test fini
    */
     void tearDown();
 
@@ -53,11 +53,11 @@ public:
    */
     TEST_DECL(Session_Membre);
     /*!
-   *  \brief Test de la méthode de consultation de la fiche de l'association
+   *  \brief Test de la methode de consultation de la fiche de l'association
    */
     TEST_DECL(Consulter_ficheAsso);
     /*!
-   *  \brief Test qui rate tout le temps ("test témoin")
+   *  \brief Test qui rate tout le temps ("test temoin")
    */
     TEST_DECL(fail);
 };

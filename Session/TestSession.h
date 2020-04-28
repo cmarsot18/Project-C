@@ -24,7 +24,7 @@ using namespace std;
 /*!
  * \Class TestSession
  * \brief Cette classe teste le bon fonctionnement d'une session
- * Elle vérifie les méthodes (à l'exception des accesseurs)
+ * Elle verifie les methodes (à l'exception des accesseurs)
  */
 
 class TestSession : public CppUnit::TestFixture {
@@ -47,12 +47,12 @@ public:
 
 
     /*!
-     * \brief Création des éléments permettant de mettre en place les tests
+     * \brief Creation des elements permettant de mettre en place les tests
      */
     void setUp();
 
     /*!
-     * \brief Libère la mémoire qui contenait les éléments de test
+     * \brief Libere la memoire qui contenait les elements de test
      */
     void tearDown();
 
@@ -67,8 +67,8 @@ public:
     */
     TEST_DECL(Connection);
     /*!
-     * \brief Ce test vérifie que CppUnit fonctionne correctement
-     * Il fait vérifier l'assertion 0==1, pour vérifier qu'il y a bien une erreur
+     * \brief Ce test verifie que CppUnit fonctionne correctement
+     * Il fait verifier l'assertion 0==1, pour verifier qu'il y a bien une erreur
      */
     TEST_DECL(fail);
 

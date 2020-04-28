@@ -7,7 +7,7 @@
 
 /*!
  * \file Session_Consultant.hpp
- * \brief Définition de la session consultant
+ * \brief Definition de la session consultant
  * \author Groupe A4
  * \version 0.1
  */
@@ -20,8 +20,8 @@
 
 /*!
  * \Class Session_Consultant
- * \brief Cette classe défini une Session consultant
- * Cette session est celle qui possède le moins de droit et donc hérite directement de session
+ * \brief Cette classe defini une Session consultant
+ * Cette session est celle qui possede le moins de droit et donc herite directement de session
  */
 
 class Session_Consultant : public Session {

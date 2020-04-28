@@ -22,8 +22,8 @@ using namespace std;
 
 /*!
  * \Class TestSessionConsultant
- * \brief Cette classe teste le bon fonctionnement d'une session associé à un consultant
- * Elle vérifie les méthodes (à l'exception des accesseurs)
+ * \brief Cette classe teste le bon fonctionnement d'une session associe à un consultant
+ * Elle verifie les methodes (à l'exception des accesseurs)
  */
 
 class TestSessionConsultant : public CppUnit::TestFixture {
@@ -39,17 +39,17 @@ public:
    */
     virtual ~TestSessionConsultant();
 /*!
-   *  \brief Création des éléments nécessaires aux tests
+   *  \brief Creation des elements necessaires aux tests
    */
     void setUp();
     /*!
-   *  \brief Libération de la mémoire
+   *  \brief Liberation de la memoire
    */
     void tearDown();
 
     CppUnit::TestSuite * make_suite();
    /*!
-   *  \brief Test de la création d'une session consultant
+   *  \brief Test de la creation d'une session consultant
    */
     TEST_DECL(Session_Consultant);
     /*!
