@@ -23,8 +23,8 @@ using namespace std;
 
 /*!
  * \Class TestSessionAdmin
- * \brief Cette classe teste le bon fonctionnement d'une session associé à un Admin
- * Elle vérifie les méthodes (à l'exception des accesseurs)
+ * \brief Cette classe teste le bon fonctionnement d'une session associe à un Admin
+ * Elle verifie les methodes (à l'exception des accesseurs)
  */
 
 class TestSessionAdmin : public CppUnit::TestFixture {
@@ -41,11 +41,11 @@ public:
     virtual ~TestSessionAdmin();
 
     /*!
-   *  \brief Création des éléments nécessaires aux tests
+   *  \brief Creation des elements necessaires aux tests
    */
     void setUp();
     /*!
-   *  \brief Libération mémoire
+   *  \brief Liberation memoire
    */
     void tearDown();
 

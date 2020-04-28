@@ -7,7 +7,7 @@
 
 /*!
  * \file Session_membre.hpp
- * \brief Définition d'une session d'un membre
+ * \brief Definition d'une session d'un membre
  * \author Groupe A4
  * \version 0.1
  */
@@ -19,8 +19,8 @@
 
 /*!
  * \Class Session_membre
- * \brief Définition d'une session d'un membre
- * Elle permet aux membres de cunsulter leur fiche ainsi que celle de l'association et donc hérite de session consultant
+ * \brief Definition d'une session d'un membre
+ * Elle permet aux membres de consulter leur fiche ainsi que celle de l'association et donc herite de session consultant
  */
 
 class Session_Membre:public Session_Consultant {
@@ -39,7 +39,7 @@ public:
     void Consulter_fiche_asso();
 /*!
 * \brief Setter pour l'attribut personne
-* permet de renseigner le memebre associé à la session
+* permet de renseigner le memebre associe à la session
 */
     void setMembre(Membre pPersonne);
 };

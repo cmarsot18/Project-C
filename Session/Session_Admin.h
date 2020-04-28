@@ -7,7 +7,7 @@
 
 /*!
  * \file Session_Admin.hpp
- * \brief Définition de la session administrateur
+ * \brief Definition de la session administrateur
  * \author Groupe A4
  * \version 0.1
  */
@@ -20,15 +20,15 @@
 
 /*!
  * \Class Session_Admin
- * \brief Cette classe défini les session administrateur
- * Les session administrateurs sont celles qui vont permettre de gérer l'application
+ * \brief Cette classe defini les session administrateur
+ * Les session administrateurs sont celles qui vont permettre de gerer l'application
  */
 
 class Session_Admin : public Session_Membre{
 public:
     /*!
      * \brief Affiche une fiche
-     * Affiche la fiche du membre ciblé
+     * Affiche la fiche du membre cible
      */
     void Consulter_fiche(Personne pMembre);
     /*!

@@ -7,7 +7,7 @@
 
 /*!
  * \file Session.hpp
- * \brief Définition d'une session
+ * \brief Definition d'une session
  * \author Groupe A4
  * \version 0.1
  */
@@ -17,8 +17,8 @@
 
 /*!
  * \Class Session
- * \brief Cette classe défini une session
- * Cette classe contient les information de connection et ne sera jamais implémenter en tant que tel
+ * \brief Cette classe defini une session
+ * Cette classe contient les information de connection et ne sera jamais implementer en tant que tel
  */
 
 class Session {
@@ -35,7 +35,7 @@ public:
 
     /*!
      * \brief Permet de se connecter à sa session
-     * Renvoie un booléen décrivant si la connection peut s'établir
+     * Renvoie un booleen decrivant si la connection peut s'etablir
      */
     bool Connection(const std::string,const std::string) const;
 };
