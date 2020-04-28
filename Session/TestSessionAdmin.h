@@ -31,16 +31,37 @@ class TestSessionAdmin : public CppUnit::TestFixture {
 private:
     Membre membre;
 public:
+    /*!
+   *  \brief Constructeur de TestSessionAdmin
+   */
     TestSessionAdmin();
+    /*!
+   *  \brief Destructeur de TestSessionAdmin
+   */
     virtual ~TestSessionAdmin();
 
+    /*!
+   *  \brief Création des éléments nécessaires aux tests
+   */
     void setUp();
+    /*!
+   *  \brief Libération mémoire
+   */
     void tearDown();
 
     CppUnit::TestSuite * make_suite();
 
+    /*!
+   *  \brief Test du constructeur de Session admin
+   */
     TEST_DECL(Session_Admin);
+    /*!
+   *  \brief Test de la consultation d'une fiche
+   */
     TEST_DECL(Consulter_fiche);
+    /*!
+   *  \brief Test qui rate tout le temps
+   */
     TEST_DECL(fail);
 };
 

@@ -30,16 +30,35 @@ class TestSessionMembre : public CppUnit::TestFixture {
 private:
     Membre membre;
 public:
+    /*!
+   *  \brief Constructeur de la classe TestSessionMembre
+   */
     TestSessionMembre();
+    /*!
+   *  \brief Destructeur de la classe TestSessionMembre
+   */
     virtual ~TestSessionMembre();
-
+/*!
+   *  \brief Création des éléments permettant de mettre en place les tests
+   */
     void setUp();
+    /*!
+   *  \brief On libère la mémoire une fois le test fini
+   */
     void tearDown();
 
     CppUnit::TestSuite * make_suite();
-
+/*!
+   *  \brief Test du constructeur de la classe Session membre
+   */
     TEST_DECL(Session_Membre);
+    /*!
+   *  \brief Test de la méthode de consultation de la fiche de l'association
+   */
     TEST_DECL(Consulter_ficheAsso);
+    /*!
+   *  \brief Test qui rate tout le temps ("test témoin")
+   */
     TEST_DECL(fail);
 };
 

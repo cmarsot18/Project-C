@@ -14,7 +14,6 @@ using namespace std;
 
 /*! \class Consultant
    * \brief classe representant la personne consultant dans une association
-   *
    *  La classe est heritee de la classe Personne qui definit plus prondement les attributs d une personne 
    */
 class Consultant : public Personne {

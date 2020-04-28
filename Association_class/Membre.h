@@ -156,11 +156,22 @@ public:
 
     void setDepartement(string p_departement);
 
+   /*!
+   *  \brief Redéfinition de l'opérateur ==
+   *
+   *  Des membres sont identiques si ils ont le même nom et le même prénom
+   */
     bool operator == (const Membre obj1)
     {
         return (this->nom == obj1.nom
                 && this->prenom == obj1.prenom);
     }
+
+    /*!
+   *  \brief Redéfinition de l'opérateur <
+   *
+   *  On trie selon le nom
+   */
 
     bool operator < (const Membre obj1)
     {
