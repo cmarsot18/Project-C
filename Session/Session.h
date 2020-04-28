@@ -26,6 +26,7 @@ private:
     std::string ID;
     std::string Pass;
 public:
+    Session();
     Session(const std::string,const std::string);
     void setID(const std::string);
     void setPass(const std::string);

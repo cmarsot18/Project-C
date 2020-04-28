@@ -4,6 +4,10 @@
 
 #include "Session.h"
 
+Session::Session() {
+
+}
+
 Session::Session(const std::string, const std::string) {
 
 }

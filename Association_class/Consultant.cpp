@@ -20,9 +20,13 @@ Consultant::Consultant( string p_Mission, string p_nom, string p_prenom,
 
 };
 
+Consultant::Consultant() {
+
+}
+
 Consultant::~Consultant(){
 
-};
+}
 
 string Consultant::getMission() const
 {

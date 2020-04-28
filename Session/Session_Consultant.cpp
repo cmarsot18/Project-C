@@ -4,7 +4,7 @@
 
 #include "Session_Consultant.h"
 
-Session_Consultant::Session_Consultant() {
+Session_Consultant:: Session_Consultant(){
 
 }
 
@@ -15,7 +15,7 @@ Session_Consultant::~Session_Consultant() {
 
 }
 
-Personne Session_Consultant::getConsultant() const {
+Consultant Session_Consultant::getConsultant() const {
 
 }
 

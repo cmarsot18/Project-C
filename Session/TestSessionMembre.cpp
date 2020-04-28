@@ -47,7 +47,7 @@ void TestSessionMembre::test_Session_Membre() {
 }
 
 void TestSessionMembre::test_Consulter_ficheAsso() {
-    Session_Membre * C1 = new Session_Membre( Membre );
+    Session_Membre * C1 = new Session_Membre( membre );
     C1->Consulter_fiche();
     //Taiter le cas ou il n'y a pas de fiche existante
 }

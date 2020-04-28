@@ -29,7 +29,7 @@ using namespace std;
 
 class TestSessionAdmin : public CppUnit::TestFixture {
 private:
-    Personne Membre;
+    Membre membre;
 public:
     TestSessionAdmin();
     virtual ~TestSessionAdmin();

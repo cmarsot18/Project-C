@@ -24,6 +24,13 @@ class Membre : public Personne {
 public:
 
     /*!
+   *  \brief Constructeur
+   *
+   *  Constructeur de la classe Membre
+   */
+    Membre();
+
+    /*!
     *  \brief Constructeur
     *
     *  Constructeur de la classe Membre

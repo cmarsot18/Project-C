@@ -1,5 +1,9 @@
 #include "Membre.h"
 
+Membre::Membre() {
+
+}
+
 Membre::Membre(string p_pole){
     pole = p_pole;
 };

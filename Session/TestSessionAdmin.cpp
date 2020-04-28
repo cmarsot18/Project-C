@@ -25,7 +25,7 @@ TestSessionAdmin::~TestSessionAdmin(){
  * setUp: function called before each test
  */
 void TestSessionAdmin::setUp() {
-    Personne Membre;
+    Membre membre;
 }
 
 /**
@@ -39,16 +39,16 @@ void TestSessionAdmin::tearDown() {
  * sum i=1,size of v[i] which is supposed to be
  * equal to size*(size+1)/2
  */
-void TestSessionAdmin::TestSessionAdmin() {
+void TestSessionAdmin::test_Session_Admin(){
     // vector has been filled by method 'setUp'
-    Session_Admin * C1 = new Session_Admin( Membre );
-    CPPUNIT_ASSERT(C1->getMembre() == Membre);
+    Session_Admin * C1 = new Session_Admin( membre );
+    CPPUNIT_ASSERT(C1->getMembre() == membre);
 }
 
-void TestSessionAdmin::test_Consulter_ficheAsso() {
-    Session_Admin * C1 = new Session_Admin( Membre );
-    Membre test = new Membre();
-    C1->Consulter_fiche(test);
+void TestSessionAdmin::test_Consulter_fiche() {
+    Session_Admin * C1 = new Session_Admin( membre );
+    Membre *test = new Membre();
+    C1->Consulter_fiche(*test);
     //Taiter le cas ou il n'y a pas de fiche existante
 }
 

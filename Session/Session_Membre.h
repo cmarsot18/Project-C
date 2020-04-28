@@ -23,7 +23,7 @@
  * Elle permet aux membres de cunsulter leur fiche ainsi que celle de l'association et donc hérite de session consultant
  */
 
-class Session_Membre::public Session_Consultant {
+class Session_Membre:public Session_Consultant {
 private :
     Membre personne;
 public:

@@ -26,7 +26,7 @@ TestSessionConsultant::~TestSessionConsultant(){
  * setUp: function called before each test
  */
 void TestSessionConsultant::setUp() {
-    Consultant consultant = new Consultant() ;
+    Consultant *consultant = new Consultant() ;
 }
 
 /**

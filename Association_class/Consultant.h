@@ -30,6 +30,14 @@ public:
     *  \brief Constructeur
     *
     *  Constructeur de la classe Consultant
+
+    */
+    Consultant();
+
+    /*!
+    *  \brief Constructeur
+    *
+    *  Constructeur de la classe Consultant
     *
     *  \param p : nom du pole
     */

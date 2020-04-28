@@ -27,7 +27,7 @@
 class Session_Consultant : public Session {
 public:
     void setConsultant(const Consultant);
-    Personne getConsultant() const;
+    Consultant getConsultant() const;
     Session_Consultant();
     Session_Consultant(const Consultant);
     virtual ~Session_Consultant();
@@ -39,7 +39,7 @@ public:
     void Consulter_fiche();
 
 private:
-    Personne consultant;
+    Consultant consultant;
 };
 
 
