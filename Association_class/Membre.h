@@ -97,21 +97,21 @@ public:
     void setNom(string p_nom);
 
     /*!
-*  \brief Donne le prénom du membre
+*  \brief Donne le prenom du membre
 *
-*  Methode qui permet de retourner le prénom du membre
+*  Methode qui permet de retourner le prenom du membre
 *
-*  \return un str qui est le prénom du membre
+*  \return un str qui est le prenom du membre
 */
     string getPrenom() const;
 
 
     /*!
-     *  \brief Rentre le prénom du membre
+     *  \brief Rentre le prenom du membre
      *
-     *  Methode qui permet de rentrer le prénom du membre
+     *  Methode qui permet de rentrer le prenom du membre
      *
-     *  \param p : le prénom du membre
+     *  \param p : le prenom du membre
      */
 
     void setPrenom(string p_prenom);
@@ -137,29 +137,29 @@ public:
     void setMail(string p_mail);
 
     /*!
-*  \brief Donne le département du membre
+*  \brief Donne le departement du membre
 *
-*  Methode qui permet de retourner le département du membre
+*  Methode qui permet de retourner le departement du membre
 *
-*  \return un str qui est le département du membre
+*  \return un str qui est le departement du membre
 */
     string getDepartement() const;
 
 
     /*!
-     *  \brief Rentre le département du membre
+     *  \brief Rentre le departement du membre
      *
-     *  Methode qui permet de rentrer le département du membre
+     *  Methode qui permet de rentrer le departement du membre
      *
-     *  \param p : le département du membre
+     *  \param p : le departement du membre
      */
 
     void setDepartement(string p_departement);
 
    /*!
-   *  \brief Redéfinition de l'opérateur ==
+   *  \brief Redefinition de l'opérateur ==
    *
-   *  Des membres sont identiques si ils ont le même nom et le même prénom
+   *  Des membres sont identiques si ils ont le meme nom et le meme prenom
    */
     bool operator == (const Membre obj1)
     {
@@ -168,7 +168,7 @@ public:
     }
 
     /*!
-   *  \brief Redéfinition de l'opérateur <
+   *  \brief Redefinition de l'operateur <
    *
    *  On trie selon le nom
    */

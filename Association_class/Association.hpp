@@ -3,7 +3,7 @@
 
 /*!
  * \file Association.hpp
- * \brief Définition d'une association
+ * \brief Definition d'une association
  * \author Groupe A4
  * \version 0.1
  */
@@ -17,8 +17,8 @@ using namespace std;
 
 /*!
  * \Class Association
- * \brief Cette classe défini une association
- * Elle contient un certain nombre de renseignements sur l'association (Nom, lieu du siège...)
+ * \brief Cette classe defini une association
+ * Elle contient un certain nombre de renseignements sur l'association (Nom, lieu du siege...)
  */
 
 class Association {
@@ -32,19 +32,19 @@ private:
 public:
     /*!
      * \brief Constructeur de la classe association
-     * Crée une association "vide", sans aucune information.
+     * Cree une association "vide", sans aucune information.
      */
     Association();
 
     /*!
      * \brief Constructeur de la classe association
-     * Crée une association ayec un nom seulement.
+     * Cree une association ayec un nom seulement.
      */
     Association(string p_nom);
 
     /*!
      * \brief Constructeur de la classe association
-     * Crée une association pour laquelle on connait le nom et le lieu du siège.
+     * Cree une association pour laquelle on connait le nom et le lieu du siege.
      */
     Association(string p_nom, string p_lieu);
 
@@ -64,7 +64,7 @@ public:
     string setNom(string p_nom);
 
     /*!
-     * \brief Permet d'obtenir le lieu du siège de l'association
+     * \brief Permet d'obtenir le lieu du siege de l'association
      */
     string getLieu() const;
 
