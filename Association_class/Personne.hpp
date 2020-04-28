@@ -5,7 +5,7 @@
 
 /*!
 *\file Personne.hpp
-*\brief Définition d'une personne par ses caractéristiques
+*\brief Definition d'une personne par ses caractéristiques
 *\author Groupe A4
 *\version 0.1
 *\date 7 avril 2020
@@ -22,9 +22,9 @@ class Personne {
 
 public :
     /*!
-   *  \brief Redéfinition de l'opérateur ==
+   *  \brief Redefinition de l'opérateur ==
    *
-   *  Des personnes sont identiques si elles ont le même nom et le même prénom
+   *  Des personnes sont identiques si elles ont le meme nom et le meme prénom
    */
     bool operator == (const Personne obj1)
     {
