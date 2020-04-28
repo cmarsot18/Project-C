@@ -10,7 +10,7 @@
 
 /*!
  * \file TestSession.h
- * \brief Test d'une session
+ * \brief Test d'une Session
  * \author Groupe A4
  * \version 0.1
  */

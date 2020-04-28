@@ -11,6 +11,14 @@
 
 
 using namespace std;
+
+/*!
+ * \file TestMembre.h
+ * \brief Test de la classe Membre
+ * \author Groupe A4
+ * \version 0.1
+ */
+
 #define TEST_ADD_MEMBRE(name) \
 	suite->addTest(new CppUnit::TestCaller<TestMembre>("test_"#name, \
 		&TestMembre::test_##name));

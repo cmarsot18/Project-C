@@ -10,7 +10,7 @@
 
 /*!
  * \file TestSessionConsultant.h
- * \brief Test d'une session consultant
+ * \brief Test d'une Session_Consultant
  * \author Groupe A4
  * \version 0.1
  */

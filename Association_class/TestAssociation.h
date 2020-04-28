@@ -10,6 +10,14 @@
 
 using namespace std;
 
+/*!
+ * \file TestAssociation.h
+ * \brief Test de la classe Association
+ * \author Groupe A4
+ * \version 0.1
+ */
+
+
 
 #define TEST_ADD_ASSOCIATION(name) \
 	suite->addTest(new CppUnit::TestCaller<TestAssociation>("test_"#name, \

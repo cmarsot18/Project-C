@@ -11,7 +11,7 @@
 
 /*!
  * \file TestSessionAdmin.h
- * \brief Test d'une session Admin
+ * \brief Test d'une Session_Admin
  * \author Groupe A4
  * \version 0.1
  */

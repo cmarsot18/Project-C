@@ -31,7 +31,7 @@ class CollecteurCSV {
 
     /*!
     * \brief Mise à jour des membres
-    * Permet de mettre à jour la liste des membres de l'association contenu dans un fichier texte    */
+    * Permet de mettre à jour la liste des membres de l'association contenue dans un fichier texte    */
         static void MAJMembres(std::string pathTxt);
 
 
