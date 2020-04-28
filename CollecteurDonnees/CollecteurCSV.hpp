@@ -9,7 +9,7 @@
 
 /*!
 *\file CollecteurCSV.hpp
-*\brief {Définition de la classe permettant de collecter les données à partir d"un fichier CSV}
+*\brief Definition de la classe permettant de collecter les donnees a partir d'un fichier CSV
 *\author Groupe A4
 *\version 0.1
 *\date 7 avril 2020
