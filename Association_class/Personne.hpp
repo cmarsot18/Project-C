@@ -5,7 +5,7 @@
 
 /*!
 *\file Personne.hpp
-*\brief {Définition d'une personne par ses caractéristiques}
+*\brief Définition d'une personne par ses caractéristiques
 *\author Groupe A4
 *\version 0.1
 *\date 7 avril 2020
