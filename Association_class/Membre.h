@@ -157,7 +157,7 @@ public:
     void setDepartement(string p_departement);
 
    /*!
-   *  \brief Redefinition de l'opérateur ==
+   *  \brief Redefinition de l'operateur ==
    *
    *  Des membres sont identiques si ils ont le meme nom et le meme prenom
    */

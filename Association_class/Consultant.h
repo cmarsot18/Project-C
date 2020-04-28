@@ -100,21 +100,21 @@ public:
     void setNom(string p_nom);
 
     /*!
-*  \brief Donne le prénom du Consultant
+*  \brief Donne le prenom du Consultant
 *
-*  Methode qui permet de retourner le prénom du Consultant
+*  Methode qui permet de retourner le prenom du Consultant
 *
-*  \return un str qui est le prénom du Consultant
+*  \return un str qui est le prenom du Consultant
 */
     string getPrenom() const;
 
 
     /*!
-     *  \brief Rentre le prénom du Consultant
+     *  \brief Rentre le prenom du Consultant
      *
-     *  Methode qui permet de rentrer le prénom du Consultant
+     *  Methode qui permet de rentrer le prenom du Consultant
      *
-     *  \param p : le prénom du Consultant
+     *  \param p : le prenom du Consultant
      */
 
     void setPrenom(string p_prenom);
@@ -140,21 +140,21 @@ public:
     void setMail(string p_mail);
 
     /*!
-*  \brief Donne le département du Consultant
+*  \brief Donne le departement du Consultant
 *
-*  Methode qui permet de retourner le département du Consultant
+*  Methode qui permet de retourner le departement du Consultant
 *
-*  \return un str qui est le département du Consultant
+*  \return un str qui est le departement du Consultant
 */
     string getDepartement() const;
 
 
     /*!
-     *  \brief Rentre le département du Consultant
+     *  \brief Rentre le departement du Consultant
      *
-     *  Methode qui permet de rentrer le département du Consultant
+     *  Methode qui permet de rentrer le departement du Consultant
      *
-     *  \param p : le département du Consultant
+     *  \param p : le departement du Consultant
      */
 
     void setDepartement(string p_departement);
