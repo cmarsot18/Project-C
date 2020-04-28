@@ -10,7 +10,7 @@ Session::Session() {
 
 Session::Session(const std::string p_ID, const std::string p_Pass) {
     ID = p_ID;
-    Pass = p_Pass
+    Pass = p_Pass;
 }
 
 bool Session::Connection(const std::string p_ID, const std::string p_Pass) const {
@@ -26,7 +26,7 @@ std::string Session::getPass() const {
 }
 
 void Session::setID(const std::string p_ID) {
-    ID = p_ID
+    ID = p_ID;
 }
 
 void Session::setPass(const std::string p_Pass) {
