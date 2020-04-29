@@ -18,6 +18,7 @@ using namespace std;
    */
 class Consultant : public Personne {
     std::string pole = "Consultant";
+    int notes[10];
 /*!< definition de type de pole*/
 /*! * \brief il s agit d un attribut static puisque qu il sera consultant peut importe sa mission
    */
@@ -165,6 +166,9 @@ public:
                 && this->prenom == obj1.prenom);
     }
 
+    void setNotes(int[6]);
+
+    int* getNotes();
 };
 
 #endif // CONSULTANT_H

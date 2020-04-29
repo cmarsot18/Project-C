@@ -1,0 +1,3 @@
+ADMIN,NOM,PRENOM,POLE,DPT,MAIL@MAIL.fr,3,5,5,5,5,5
+CONSU,Dubois,lea,MISSION,ASI,lea.dubois@insa-rouen.fr,3,4,5,1,2,3,4,5,1,2
+ADMIN,Martin,Alex,treso,GM,alex.martin@insa-rouen.fr,3,4,6,2,5,1

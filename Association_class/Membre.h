@@ -20,6 +20,7 @@ using namespace std;
 
 class Membre : public Personne {
     string pole;/*!< definition de type de pole*/
+    int notes[6];
 
 public:
 
@@ -156,6 +157,9 @@ public:
 
     void setDepartement(string p_departement);
 
+    void setNotes(int[6]);
+
+    int* getNotes();
    /*!
    *  \brief Redefinition de l'operateur ==
    *

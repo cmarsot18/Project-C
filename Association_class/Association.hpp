@@ -82,6 +82,7 @@ public:
      * \brief Permet d'obtenir la liste des membres de l'association
      */
     vector<Membre> getMembres() const;
+    vector<Consultant> getConsultant() const;
 
     /*!
      * \brief Permet de modifier la liste des membres de l'association
@@ -92,7 +93,7 @@ public:
      * \brief Permet d'ajouter un membre dans l'association
      */
     void ajouterMembre(Membre p_membre);
-
+    void ajouterConsultant(Consultant p_consultant);
     /*!
      * \brief Permet de supprimer un membre de l'association
      */

@@ -1,4 +1,5 @@
 #include "Consultant.h"
+#include <iostream>
 
 Consultant::Consultant(string p_Mission){
     pole = p_Mission;
@@ -73,3 +74,12 @@ void Consultant::setDepartement(std::string p_departement){
     departement = p_departement;
 };
 
+void Consultant::setNotes(int * pNotes) {
+    for (int i = 0; i <10 ; ++i) {
+        this->notes[i] = pNotes[i];
+    }
+}
+
+int* Consultant::getNotes() {
+    return this->notes;
+}

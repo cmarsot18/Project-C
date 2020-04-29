@@ -46,6 +46,10 @@ vector<Membre> Association::getMembres() const{
     return membres;
 };
 
+vector<Consultant> Association::getConsultant() const {
+    return consultants;
+}
+
 vector<Membre> Association::setMembres(vector<Membre> listeMembres) {
     membres = listeMembres;
     return membres;
@@ -53,6 +57,10 @@ vector<Membre> Association::setMembres(vector<Membre> listeMembres) {
 
 void Association::ajouterMembre(const Membre p_membre){
     membres.push_back( p_membre );
+};
+
+void Association::ajouterConsultant(Consultant p_consultant) {
+    consultants.push_back(p_consultant);
 };
 
 void Association::supprimerMembre(Membre p_membre){

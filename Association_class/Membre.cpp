@@ -72,3 +72,14 @@ string Membre::getDepartement() const
 void Membre::setDepartement(std::string p_departement){
     departement = p_departement;
 };
+
+void Membre::setNotes(int * pNotes) {
+    for (int i = 0; i <6 ; ++i) {
+        this->notes[i] = pNotes[i];
+    }
+};
+
+int* Membre::getNotes(){
+    return this->notes;
+
+}
