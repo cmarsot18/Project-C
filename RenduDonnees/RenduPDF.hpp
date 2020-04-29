@@ -4,14 +4,14 @@
 #include <string>
 /*!
  * \file RenduPDF.hpp
- * \brief Création d'une fiche récapitulative pour les membres et l'association
+ * \brief Création d'une fiche récapitulative pour les membres et l'association sous format PDF
  * \author Groupe A4
  * \version 0.1
  */
 
 /*!
  * \Class RenduPDF
- * \brief Cette classe défini les méthodes nécessaires à la création d'une fiche membre ou association
+ * \brief Cette classe définit les méthodes nécessaires à la création d'une fiche membre ou association
  */
 class RenduPDF {
 

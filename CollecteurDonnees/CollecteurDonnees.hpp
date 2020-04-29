@@ -5,7 +5,7 @@
 
 /*!
 *\file CollecteurDonnees.hpp
-*\brief {Définition de l'interface permettant de collecter les données}
+*\brief Definition de l'interface permettant de collecter les donnees
 *\author Groupe A4
 *\version 0.1
 *\date 7 avril 2020
