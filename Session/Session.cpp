@@ -3,6 +3,7 @@
 //
 
 #include "Session.h"
+#include "Association.hpp"
 using namespace std;
 
 Session::Session() {
@@ -14,7 +15,7 @@ Session::Session(const std::string p_ID, const std::string p_Pass) {
     Pass = p_Pass;
 }
 
-bool Session::Connection(const std::string p_ID, const std::string p_Pass) const {
+bool Connection(const std::string,const std::string) const{
 
 }
 
