@@ -15,7 +15,7 @@ Session::Session(const std::string p_ID, const std::string p_Pass) {
     Pass = p_Pass;
 }
 
-bool Connection(const std::string,const std::string) const{
+bool Session::Connection(const std::string,const std::string) const{
 
 }
 
