@@ -6,12 +6,18 @@ Membre::Membre() {
 
 Membre::Membre(string p_pole){
     pole = p_pole;
+    nom = " ";
+    prenom = " ";
+    mail = " ";
+    departement = " ";
 };
 
 Membre::Membre( string p_pole, string p_nom, string p_prenom ){
     pole = p_pole;
     nom = p_nom;
     prenom = p_prenom;
+    mail = " ";
+    departement = " ";
 };
 
 Membre::Membre( string p_pole, string p_nom, string p_prenom,

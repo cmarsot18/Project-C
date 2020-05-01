@@ -2,17 +2,26 @@
 #include <iostream>
 
 Consultant::Consultant(string p_Mission){
-    pole = p_Mission;
+    pole = "Consultant";
+    mission = p_Mission;
+    nom = " ";
+    prenom = " ";
+    mail = " ";
+    departement = " ";
 };
 
 Consultant::Consultant( string p_Mission, string p_nom, string p_prenom ){
+    pole = "Consultant";
     mission = p_Mission;
     nom = p_nom;
     prenom = p_prenom;
+    mail = " ";
+    departement = " ";
 };
 
 Consultant::Consultant( string p_Mission, string p_nom, string p_prenom,
                 string p_mail, string p_departement ){
+    pole = "Consultant";
     mission = p_Mission;
     nom = p_nom;
     prenom = p_prenom;
