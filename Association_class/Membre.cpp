@@ -87,5 +87,6 @@ void Membre::setNotes(int * pNotes) {
 
 int* Membre::getNotes(){
     return this->notes;
-
 }
+
+void Membre::setAdmin() {this->Admin = !this->Admin;}

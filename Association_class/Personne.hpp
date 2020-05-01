@@ -28,10 +28,12 @@ public :
     void setID(const std::string);
     void setpass(const std::string);
     void setsaves(const int);
+    void setpole(const std::string);
     std::string getpass();
     std::string getID();
     int getsaves();
     std::string getpole();
+
 
     /*!
    *  \brief Redefinition de l'opérateur ==
