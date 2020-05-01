@@ -22,8 +22,17 @@ class Personne {
         std::string Id= " ";
         std::string pass= " ";
         int saves = 0;
+        std::string pole = " ";
 
 public :
+    void setID(const std::string);
+    void setpass(const std::string);
+    void setsaves(const int);
+    std::string getpass();
+    std::string getID();
+    int getsaves();
+    std::string getpole();
+
     /*!
    *  \brief Redefinition de l'opérateur ==
    *

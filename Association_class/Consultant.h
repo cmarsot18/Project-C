@@ -17,7 +17,6 @@ using namespace std;
    *  La classe est heritee de la classe Personne qui definit plus prondement les attributs d une personne 
    */
 class Consultant : public Personne {
-    std::string pole = "Consultant";
     int notes[10];
 /*!< definition de type de pole*/
 /*! * \brief il s agit d un attribut static puisque qu il sera consultant peut importe sa mission
