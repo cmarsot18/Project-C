@@ -19,8 +19,10 @@ using namespace std;
    */
 
 class Membre : public Personne {
-    string pole;/*!< definition de type de pole*/
-    int notes[6];
+    string pole = " ";/*!< definition de type de pole*/
+    int notes[11];
+    bool Admin = false;
+
 
 public:
 

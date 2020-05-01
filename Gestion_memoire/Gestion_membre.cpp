@@ -41,7 +41,7 @@ Association Gestion_membre::Load(string NomAsso) {
                 //on définit les paramètres de personne
                 if(type.compare("ADMIN") ==0){
                     Membre tMembre = Membre();
-                    int tNotes[6];
+                    int tNotes[11];
 
                     //On règle les paramètres de personne
 
@@ -69,7 +69,7 @@ Association Gestion_membre::Load(string NomAsso) {
                     tMembre.setpole(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
 
-                    for (int i = 0; i < 6  ; ++i) {
+                    for (int i = 0; i < 11  ; ++i) {
                         temp2 = ligne.find(",");
                         temp = ligne.substr(0,temp2);
                         ligne = ligne.substr(temp2+1,ligne.length());
@@ -139,7 +139,7 @@ void Gestion_membre::save(Association pAssociation) {
             monFichier << tMembre.getDepartement()+"," << tMembre.getMail();
             tab = tMembre.getNotes();
             int i;
-            for ( i = 0; i < 5 ; ++i) {
+            for ( i = 0; i < 10 ; ++i) {
                 monFichier << "," << tab[i];
             }
             monFichier << "," << tab[i] << endl;

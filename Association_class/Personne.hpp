@@ -15,10 +15,13 @@
 
 class Personne {   
 	protected:
-		std::string nom;
-		std::string prenom;
-		std::string mail;
-		std::string departement;
+		std::string nom = " ";
+		std::string prenom= " ";
+		std::string mail= " ";
+		std::string departement= " ";
+        std::string Id= " ";
+        std::string pass= " ";
+        int saves = 0;
 
 public :
     /*!

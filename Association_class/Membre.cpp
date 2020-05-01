@@ -80,7 +80,7 @@ void Membre::setDepartement(std::string p_departement){
 };
 
 void Membre::setNotes(int * pNotes) {
-    for (int i = 0; i <6 ; ++i) {
+    for (int i = 0; i <11 ; ++i) {
         this->notes[i] = pNotes[i];
     }
 };
