@@ -11,39 +11,46 @@ void RenduPDF::Generer_Association() {
 
 }
 
-void RenduPDF::Generer_membre(Personne p_personne) {
-    double satisfaction;
-    double motivation;
-    double competences;
-    if (p_personne.pole == "Consultant"){
-        int nbHeures = (Consultant)p_personne.getNotes()[1];
-        int chTravail = (Consultant)p_personne.getNotes()[2];
-        motivation = (1+nbHeures+chTravail)/2;
-        int communication = (Consultant)p_personne.getNotes()[3];
-        int relations = (Consultant)p_personne.getNotes()[4];
-        int sat = (Consultant)p_personne.getNotes()[5];
-        satisfaction = (communication + relations + sat)/3;
-        int orga = (Consultant)p_personne.getNotes()[6];
-        int initiatives = (Consultant)p_personne.getNotes()[7];
-        int autonomie = (Consultant)p_personne.getNotes()[8];
-        int adaptation = (Consultant)p_personne.getNotes()[9];
-        int relationel = (Consultant)p_personne.getNotes()[10];
-        competences = (orga + initiatives + autonomie + adaptation + relationel)/5;
-    }
-    else{
-        nbHeures = (Membre)p_personne.getNotes()[1];
-        chTravail = (Membre)p_personne.getNotes()[2];
-        motivation = (1+nbHeures+chTravail)/2;
-        relations = (Membre)p_personne.getNotes()[3];
-        sat = (Membre)p_personne.getNotes()[4];
-        int nbTB = (Membre)p_personne.getNotes()[5];
-        communication = (Membre)p_personne.getNotes()[6];
-        satisfaction = (relations + sat + nbTB + communication)/4;
-        orga = (Consultant)p_personne.getNotes()[7];
-        initiatives = (Consultant)p_personne.getNotes()[8];
-        autonomie = (Consultant)p_personne.getNotes()[9];
-        adaptation = (Consultant)p_personne.getNotes()[10];
-        relationel = (Consultant)p_personne.getNotes()[11];
-        competences = (orga + initiatives + autonomie + adaptation + relationel)/5;
+void RenduPDF::Generer_membre(Personne *p_personne) {
+    if (p_personne->getpole().compare("Consultant") == 0) {
+        Consultant *p_consultant = static_cast<Consultant *>( p_personne );
+        Fiche(p_consultant);
+    } else {
+        Membre *p_membre = static_cast<Membre *>( p_personne );
+        Fiche(p_membre);
     }
 }
+
+    void RenduPDF::Fiche(Consultant* p_consultant) {
+        int nbHeures = p_consultant->getNotes()[1];
+        int chTravail = p_consultant->getNotes()[2];
+        double motivation = (1+nbHeures+chTravail)/2;
+        int communication = p_consultant->getNotes()[3];
+        int relations = p_consultant->getNotes()[4];
+        int sat = p_consultant->getNotes()[5];
+        double satisfaction = (communication + relations + sat)/3;
+        int orga = p_consultant->getNotes()[6];
+        int initiatives = p_consultant->getNotes()[7];
+        int autonomie = p_consultant->getNotes()[8];
+        int adaptation = p_consultant->getNotes()[9];
+        int relationel = p_consultant->getNotes()[10];
+        double competences = (orga + initiatives + autonomie + adaptation + relationel)/5;
+    }
+
+    void RenduPDF::Fiche(Membre* p_membre) {
+        int nbHeures = p_membre->getNotes()[1];
+        int chTravail = p_membre->getNotes()[2];
+        double motivation = (1+nbHeures+chTravail)/2;
+        int relations = p_membre->getNotes()[3];
+        int sat = p_membre->getNotes()[4];
+        int nbTB = p_membre->getNotes()[5];
+        int communication = p_membre->getNotes()[6];
+        double satisfaction = (relations + sat + nbTB + communication)/4;
+        int orga = p_membre->getNotes()[7];
+        int initiatives = p_membre->getNotes()[8];
+        int autonomie = p_membre->getNotes()[9];
+        int adaptation = p_membre->getNotes()[10];
+        int relationel = p_membre->getNotes()[11];
+        double competences = (orga + initiatives + autonomie + adaptation + relationel)/5;
+    }
+
