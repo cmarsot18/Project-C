@@ -17,9 +17,10 @@ using namespace std;
    *
    *  La classe est heritee de la classe Personne qui definit plus prondement les attributs d une personne
    */
+#define NB_NOTES_MEMBRE     11
 
 class Membre : public Personne {
-    int notes[11];
+    int notes[NB_NOTES_MEMBRE];
     bool Admin = false;
 
 
@@ -158,7 +159,7 @@ public:
 
     void setDepartement(string p_departement);
 
-    void setNotes(int[6]);
+    void setNotes(int[NB_NOTES_MEMBRE]);
 
     int* getNotes();
 

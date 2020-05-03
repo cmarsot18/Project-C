@@ -2,9 +2,12 @@
 #define RENDUPDF_H
 #include "RenduDonnees.hpp"
 #include <string>
+#include "hpdf.h"
+
 #include "Membre.h"
 #include "Consultant.h"
 
+#define LOGO "/home/guenole/CLionProjects/Project-C/logo.jpeg"
 /*!
  * \file RenduPDF.hpp
  * \brief Création d'une fiche récapitulative pour les membres et l'association sous format PDF
@@ -23,23 +26,32 @@ class RenduPDF {
         
     public :
     /*!
+    *  \brief Constructeur
+    *
+    *  Constructeur de la classe RenduPDF
+    *
+    *  \param p : Chemin du fichier
+    */
+    RenduPDF(string p_path);
+
+    /*!
      * \brief Génération de la fiche d'un membre
      * Cette fiche fera apparaitre les indicateurs caractéristiques du membre (satisfaction, motivation...)
      */
-        static void Generer_membre(Personne *p_Personne);
+        void Generer_membre(Personne *p_Personne);
 
     /*!
     * \brief Génération de la fiche d'un membre
     * Cette fiche fera apparaitre les indicateurs caractéristiques du membre (satisfaction, motivation...)
     */
-        static void Fiche(Membre *p_membre);
+        void Fiche(Membre *p_membre);
 
 
     /*!
      * \brief Génération de la fiche d'un consultant
      * Cette fiche fera apparaitre les indicateurs caractéristiques du consultant (satisfaction, motivation...)
      */
-        static void Fiche(Consultant *p_consultant);
+        void Fiche(Consultant *p_consultant);
 
 
 

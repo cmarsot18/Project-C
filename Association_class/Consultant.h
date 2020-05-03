@@ -12,12 +12,14 @@
 
 using namespace std;
 
+#define NB_NOTES_CONSULTANT    10
+
 /*! \class Consultant
    * \brief classe representant la personne consultant dans une association
    *  La classe est heritee de la classe Personne qui definit plus prondement les attributs d une personne 
    */
 class Consultant : public Personne {
-    int notes[10];
+    int notes[NB_NOTES_CONSULTANT];
 /*!< definition de type de pole*/
 /*! * \brief il s agit d un attribut static puisque qu il sera consultant peut importe sa mission
    */
@@ -165,7 +167,7 @@ public:
                 && this->prenom == obj1.prenom);
     }
 
-    void setNotes(int[6]);
+    void setNotes(int[NB_NOTES_CONSULTANT]);
 
     int* getNotes();
 };

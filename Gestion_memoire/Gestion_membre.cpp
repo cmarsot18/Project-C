@@ -41,7 +41,7 @@ Association Gestion_membre::Load(string NomAsso) {
                 //on définit les paramètres de personne
                 if(type.compare("ADMIN") ==0){
                     Membre tMembre = Membre();
-                    int tNotes[11];
+                    int tNotes[NB_NOTES_MEMBRE];
 
                     //On règle les paramètres de personne
 
@@ -69,7 +69,7 @@ Association Gestion_membre::Load(string NomAsso) {
                     tMembre.setpole(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
 
-                    for (int i = 0; i < 11  ; ++i) {
+                    for (int i = 0; i < NB_NOTES_MEMBRE  ; ++i) {
                         temp2 = ligne.find(",");
                         temp = ligne.substr(0,temp2);
                         ligne = ligne.substr(temp2+1,ligne.length());
@@ -78,7 +78,7 @@ Association Gestion_membre::Load(string NomAsso) {
                     tMembre.setNotes(tNotes);
                     result.ajouterMembre(tMembre);
                 }else{
-                    int tNotes[10];
+                    int tNotes[NB_NOTES_CONSULTANT];
                     Consultant tConsultant = Consultant();
 
                     //On règle les paramètres de personne
@@ -107,7 +107,7 @@ Association Gestion_membre::Load(string NomAsso) {
                     tConsultant.setMission(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
 
-                    for (int i = 0; i < 10  ; ++i) {
+                    for (int i = 0; i < NB_NOTES_CONSULTANT  ; ++i) {
                         temp2 = ligne.find(",");
                         temp = ligne.substr(0,temp2);
                         ligne = ligne.substr(temp2+1,ligne.length());
