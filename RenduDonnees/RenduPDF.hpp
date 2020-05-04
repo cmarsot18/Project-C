@@ -6,6 +6,7 @@
 
 #include "Membre.h"
 #include "Consultant.h"
+#include "Association.hpp"
 
 #define LOGO "/home/guenole/CLionProjects/Project-C/logo.jpeg"
 /*!
@@ -58,6 +59,6 @@ class RenduPDF {
     /*!
     * \brief Génération de la fiche de l'association
     */
-        static void Generer_Association();
+        void Generer_Association(Association association);
 };
 #endif
