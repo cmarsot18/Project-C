@@ -7,6 +7,7 @@ include_directories(Association_class)
 include_directories(CollecteurDonnees)
 include_directories(RenduDonnees)
 include_directories(Session)
+include_directories(Gestion_memoire/Assos)
 
 add_executable(Project_C
         Association_class/Association.hpp
@@ -31,7 +32,9 @@ add_executable(Project_C
         Association_class/Membre.cpp
         Association_class/Association.cpp
         ProjetMain/Projet.cpp
-        ProjetMain/Projet.h)
+        ProjetMain/Projet.h
+        Gestion_memoire/Gestion_membre.h
+        Gestion_memoire/Gestion_membre.cpp)
 
 add_executable(Test
         Association_class/Association.hpp
