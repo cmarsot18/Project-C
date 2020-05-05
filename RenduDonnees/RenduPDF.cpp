@@ -68,7 +68,7 @@ void RenduPDF::Generer_Association(Association association) {
     double autonomie = 0;
     double adaptation = 0;
     double relationel = 0;
-    for (int i = 0; i++; i < association.getNombre_Membres()) {
+    for (int i = 0; i < association.getNombre_Membres(); i++) {
         nbHeures += membres[i].getNotes()[0];
         chTravail += membres[i].getNotes()[1];
         relations += membres[i].getNotes()[2];
