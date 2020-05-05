@@ -1,0 +1,35 @@
+Index: Session/Session_Membre.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by marsot on 07/04/2020.\r\n//\r\n\r\n#include \"Session_Membre.h\"\r\n\r\nSession_Membre::Session_Membre() {\r\n\r\n}\r\n\r\nSession_Membre::Session_Membre(const Membre) {\r\n\r\n}\r\nSession_Membre::~Session_Membre() {\r\n\r\n}\r\n\r\nPersonne Session_Membre::getMembre() const {\r\n\r\n}\r\n\r\nvoid Session_Membre::setMembre(const Membre) {\r\n\r\n}\r\n\r\nvoid Session_Membre::Consulter_fiche_asso() {\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Session/Session_Membre.cpp	(revision 33cc63445b0ae6616307280d8e945257f2968842)
++++ Session/Session_Membre.cpp	(date 1588056576187)
+@@ -4,6 +4,7 @@
+ 
+ #include "Session_Membre.h"
+ 
++
+ Session_Membre::Session_Membre() {
+ 
+ }
+Index: Session/Session_Membre.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by marso on 07/04/2020.\r\n//\r\n\r\n#ifndef PROJET_C_SESSION_MEMBRE_H\r\n#define PROJET_C_SESSION_MEMBRE_H\r\n\r\n/*!\r\n * \\file Session_membre.hpp\r\n * \\brief Définition d'une session d'un membre\r\n * \\author Groupe A4\r\n * \\version 0.1\r\n */\r\n\r\n#include <iostream>\r\n#include <string>\r\n#include \"../Association_class/Membre.h\"\r\n#include \"Session_Consultant.h\"\r\n\r\n/*!\r\n * \\Class Session_membre\r\n * \\brief Définition d'une session d'un membre\r\n * Elle permet aux membres de cunsulter leur fiche ainsi que celle de l'association et donc hérite de session consultant\r\n */\r\n\r\nclass Session_Membre::public Session_Consultant {\r\nprivate :\r\n    Membre personne;\r\npublic:\r\n    void setMembre(const Personne);\r\n    Personne getMembre() const;\r\n    Session_Membre();\r\n    Session_Membre(const Membre);\r\n    virtual ~Session_Membre();\r\n/*!\r\n* \\brief affiche la fiche asso\r\n* permet de consulter la fiche de l'association\r\n*/\r\n    void Consulter_fiche_asso();\r\n/*!\r\n* \\brief Setter pour l'attribut personne\r\n* permet de renseigner le memebre associé à la session\r\n*/\r\n    void setMembre(Membre pPersonne);\r\n};\r\n\r\n\r\n#endif //PROJET_C_SESSION_MEMBRE_H\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Session/Session_Membre.h	(revision 33cc63445b0ae6616307280d8e945257f2968842)
++++ Session/Session_Membre.h	(date 1588056576253)
+@@ -23,7 +23,7 @@
+  * Elle permet aux membres de cunsulter leur fiche ainsi que celle de l'association et donc hérite de session consultant
+  */
+ 
+-class Session_Membre::public Session_Consultant {
++class Session_Membre:public Session_Consultant {
+ private :
+     Membre personne;
+ public:

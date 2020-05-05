@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project_C"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project_C">
+				<Option output="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Project_C.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_C"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project_C/fast">
+				<Option output="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Project_C.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_C/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test">
+				<Option output="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test/fast">
+				<Option output="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees"/>
+					<Add directory="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/marso/CLionProjects/Project-C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Association.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Association.hpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Consultant.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Consultant.h">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Membre.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Membre.h">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Personne.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/Personne.hpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/TestAssociation.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/TestAssociation.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/TestConsultant.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/TestConsultant.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/TestMembre.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Association_class/TestMembre.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees/CollecteurCSV.hpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees/CollecteurDonnees.hpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees/TestCollecteurCSV.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/CollecteurDonnees/TestCollecteurCSV.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/ProjetMain/Projet.cpp">
+			<Option target="Project_C"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/ProjetMain/Projet.h">
+			<Option target="Project_C"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees/RenduDonnees.hpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees/RenduPDF.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees/RenduPDF.hpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees/TestRenduPDF.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/RenduDonnees/TestRenduPDF.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session.h">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session_Admin.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session_Admin.h">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session_Consultant.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session_Consultant.h">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session_Membre.cpp">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/Session_Membre.h">
+			<Option target="Project_C"/>
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSession.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSession.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSessionAdmin.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSessionAdmin.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSessionConsultant.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSessionConsultant.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSessionMembre.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Session/TestSessionMembre.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Test/TestProject.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/Test/TestUnit.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/marso/CLionProjects/Project-C/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

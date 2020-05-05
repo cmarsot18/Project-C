@@ -1,0 +1,198 @@
+Index: Gestion_memoire/Assos/AJIR.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>ADMIN,NOM,PRENOM,DPT,MAIL@MAIL.fr,ID,PASS,1,Administrateur,POLE,3,5,5,5,5,5\r\nCONSU,NOM,PRENOM,DPT,MAIL@MAIL.fr,ID,PASS,1,MISSION,3,4,5,1,2,3,4,5,1,2\r\nADMIN,NOM,PRENOM,DPT,MAIL@MAIL.fr,ID,PASS,1, ,POLE,3,5,5,5,5,5\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Gestion_memoire/Assos/AJIR.txt	(revision b9b0c2383231ac060a3970efe713f6ffc99616b6)
++++ Gestion_memoire/Assos/AJIR.txt	(date 1588667378248)
+@@ -1,4 +1,3 @@
+-ADMIN,NOM,PRENOM,DPT,MAIL@MAIL.fr,ID,PASS,1,Administrateur,POLE,3,5,5,5,5,5
+-CONSU,NOM,PRENOM,DPT,MAIL@MAIL.fr,ID,PASS,1,MISSION,3,4,5,1,2,3,4,5,1,2
+-ADMIN,NOM,PRENOM,DPT,MAIL@MAIL.fr,ID,PASS,1, ,POLE,3,5,5,5,5,5
+-
++ADMIN,NOM,PRENOM1,DPT,MAIL@MAIL.fr,ID,PASS,1,Administrateur,POLE,3,5,5,5,5,5,5,5,5,5,5
++CONSU,NOM,PRENOM2,DPT,MAIL@MAIL.fr,ID,PASS,1,MISSION,3,4,5,1,2,3,4,5,1,2
++ADMIN,NOM,PRENOM3,DPT,MAIL@MAIL.fr,ID,PASS,1, ,POLE,3,5,5,5,5,5,5,5,5,5,5
+\ No newline at end of file
+Index: Gestion_memoire/Assos/BIS.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>ADMIN,NOM,PRENOM,MAIL@MAIL.fr,POLE,DPT,3,5,5,5,5,5\r\nADMIN,Martin,Alex,alex.martin@insa-rouen.fr,treso,GM,3,4,6,2,5,1\r\nCONSU,Dubois,lea,lea.dubois@insa-rouen.fr,MISSION,ASI,3,4,5,1,2,3,4,5,1,2\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Gestion_memoire/Assos/BIS.txt	(revision b9b0c2383231ac060a3970efe713f6ffc99616b6)
++++ Gestion_memoire/Assos/BIS.txt	(date 1588667379093)
+@@ -1,3 +1,3 @@
+-ADMIN,NOM,PRENOM,MAIL@MAIL.fr,POLE,DPT,3,5,5,5,5,5
+-ADMIN,Martin,Alex,alex.martin@insa-rouen.fr,treso,GM,3,4,6,2,5,1
+-CONSU,Dubois,lea,lea.dubois@insa-rouen.fr,MISSION,ASI,3,4,5,1,2,3,4,5,1,2
++ADMIN,NOM,PRENOM1,DPT,MAIL@MAIL.fr,ID,PASS,1,Administrateur,POLE,,3,5,5,5,5,5,5,5,5,5,5
++ADMIN,NOM,PRENOM3,DPT,MAIL@MAIL.fr,ID,PASS,1, ,POLE,,3,5,5,5,5,5,5,5,5,5,5
++CONSU,NOM,PRENOM2,DPT,MAIL@MAIL.frID,PASS,1,MISSION,,3,4,5,1,2,3,4,5,1,2
+Index: Gestion_memoire/Gestion_membre.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by marso on 28/04/2020.\r\n//\r\n\r\n#ifndef UNTITLED_GESTION_MEMBRE_H\r\n#define UNTITLED_GESTION_MEMBRE_H\r\n\r\n#include<string>\r\n#include<iostream>\r\n#include \"../Association_class/Association.hpp\"\r\n#include \"../Association_class/Membre.h\"\r\n#include \"../Association_class/Personne.hpp\"\r\n#include \"../Association_class/Consultant.h\"\r\n#include \"../Session/Session.h\"\r\n#include \"../Session/Session_Admin.h\"\r\n#include \"../Session/Session_Consultant.h\"\r\n#include \"../Session/Session_Membre.h\"\r\n\r\nusing namespace std;\r\n\r\n\r\n\r\nclass Gestion_membre {\r\npublic :\r\n    Association static Load(string);\r\n    void static save(Association);\r\n};\r\n\r\n\r\n#endif //UNTITLED_GESTION_MEMBRE_H\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Gestion_memoire/Gestion_membre.h	(revision b9b0c2383231ac060a3970efe713f6ffc99616b6)
++++ Gestion_memoire/Gestion_membre.h	(date 1588662428917)
+@@ -15,6 +15,8 @@
+ #include "../Session/Session_Admin.h"
+ #include "../Session/Session_Consultant.h"
+ #include "../Session/Session_Membre.h"
++#include "../Association_class/Personne.hpp"
++
+ 
+ using namespace std;
+ 
+Index: Gestion_memoire/Gestion_membre.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\r\n// Created by marso on 28/04/2020.\r\n//\r\n#include <stdio.h>\r\n#include <windows.h>\r\n#include <dirent.h>\r\n#include \"Gestion_membre.h\"\r\n#include \"Personne.hpp\"\r\n#include <fstream>\r\n#include <vector>\r\n#include <unistd.h>\r\n#include \"../Association_class/Association.hpp\"\r\n\r\nAssociation Gestion_membre::Load(string NomAsso) {\r\n    //on regarde si l'association éxiste\r\n    DIR * rep = opendir(\"Gestion_memoire/Assos\");\r\n    Association result = Association(NomAsso);\r\n    std::string temp,path;\r\n    int temp2;\r\n    if (rep != NULL)\r\n    {\r\n        struct dirent * ent;\r\n        while ((ent = readdir(rep)) != NULL)\r\n        {\r\n            temp = ent->d_name;\r\n            temp2 = temp.find(NomAsso);\r\n            if(temp2 != -1){\r\n                path = \"Gestion_memoire/Assos/\"+temp;\r\n            }\r\n        }\r\n        closedir(rep);\r\n        //On effectue le cahregement à aprtir d'ici\r\n        ifstream Fichier(path);\r\n        Membre tMembre = Membre();\r\n        if(Fichier){\r\n            string ligne;\r\n            while( getline(Fichier, ligne) )\r\n            {\r\n                //on trouve le type de Personne\r\n                temp2 = ligne.find(\",\");\r\n                std::string type  = ligne.substr(0,temp2);\r\n                //on définit les paramètres de personne\r\n                if(type.compare(\"ADMIN\") ==0){\r\n                    Membre tMembre = Membre();\r\n                    int tNotes[NB_NOTES_MEMBRE];\r\n\r\n                    //On règle les paramètres de personne\r\n\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setNom(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setPrenom(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setDepartement(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setMail(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setID(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setpass(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    if((ligne.substr(0,temp2).compare(\"Administrateur\")){\r\n                        tMembre.setAdmin();\r\n                    }\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n\r\n                    //on règle les paramètres de membre\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setpole(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    for (int i = 0; i < NB_NOTES_MEMBRE  ; ++i) {\r\n                        temp2 = ligne.find(\",\");\r\n                        temp = ligne.substr(0,temp2);\r\n                        ligne = ligne.substr(temp2+1,ligne.length());\r\n                        tNotes[i] = std::stoi(temp);\r\n                    }\r\n                    tMembre.setNotes(tNotes);\r\n                    result.ajouterMembre(tMembre);\r\n                }else{\r\n                    int tNotes[NB_NOTES_CONSULTANT];\r\n                    Consultant tConsultant = Consultant();\r\n\r\n                    //On règle les paramètres de personne\r\n\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n                    temp2 = ligne.find(\",\");\r\n                    tConsultant.setNom(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tConsultant.setPrenom(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tConsultant.setDepartement(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tConsultant.setMail(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setID(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setpass(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n\r\n                    //on règle les paramètres de membre\r\n\r\n                    temp2 = ligne.find(\",\");\r\n                    tConsultant.setMission(ligne.substr(0,temp2));\r\n                    ligne = ligne.substr(temp2+1,ligne.length());\r\n\r\n                    for (int i = 0; i < NB_NOTES_CONSULTANT  ; ++i) {\r\n                        temp2 = ligne.find(\",\");\r\n                        temp = ligne.substr(0,temp2);\r\n                        ligne = ligne.substr(temp2+1,ligne.length());\r\n                        tNotes[i] = std::stoi(temp);\r\n                    }\r\n                    tConsultant.setNotes(tNotes);\r\n                    result.ajouterConsultant(tConsultant);\r\n                }\r\n            }\r\n        }else{\r\n            cout << \"ERREUR: Impossible d'ouvrir le fichier.\" << endl;\r\n        }\r\n    }\r\n    return result;\r\n}\r\n\r\nvoid Gestion_membre::save(Association pAssociation) {\r\n    ofstream monFichier(\"Gestion_memoire/Assos/\"+pAssociation.getNom()+\".txt\");\r\n    int* tab;\r\n    Membre tMembre;\r\n    Consultant tConsultant;\r\n    if(monFichier){\r\n        vector<Membre> listMembre =  pAssociation.getMembres();\r\n        vector<Membre>::iterator it;\r\n        for(it = listMembre.begin(); it!=listMembre.end();++it){\r\n            tMembre = *it;\r\n            //Nomenclature\r\n            monFichier << \"ADMIN,\" ;\r\n            //Paramètres généraux\r\n            monFichier<< tMembre.getNom()+\",\" << tMembre.getPrenom()+\",\";\r\n            monFichier << tMembre.getDepartement()+\",\" << tMembre.getMail()+\",\";\r\n            monFichier << tMembre.getID()+\",\" << tMembre.getpass()+\",\" << tMembre.getsaves() << \",\";\r\n            if(tMembre.getAdmin()){\r\n                monFichier << \"Administrateur,\";\r\n            }else{\r\n                monFichier << \" ,\";\r\n            }\r\n            //Paramètres membres\r\n            monFichier<< tMembre.getpole()+\",\";\r\n            tab = tMembre.getNotes();\r\n            int i;\r\n            for ( i = 0; i < 10 ; ++i) {\r\n                monFichier << \",\" << tab[i];\r\n            }\r\n            monFichier << \",\" << tab[i] << endl;\r\n        }\r\n        vector<Consultant> listConsultant =  pAssociation.getConsultant();\r\n        vector<Consultant>::iterator it2;\r\n        for(it2 = listConsultant.begin(); it2!=listConsultant.end();++it2){\r\n            tConsultant = *it2;\r\n            //Nomenclature\r\n            monFichier << \"CONSU,\" ;\r\n            //Paramètres généraux\r\n            monFichier << tConsultant.getNom()+\",\" << tConsultant.getPrenom()+\",\";\r\n            monFichier << tConsultant.getDepartement()+\",\" << tConsultant.getMail();\r\n            monFichier << tMembre.getID()+\",\" << tMembre.getpass()+\",\" << tMembre.getsaves() << \",\";\r\n            //Paramètres Consultant\r\n            monFichier<< tConsultant.getMission()+\",\";\r\n            tab = tConsultant.getNotes();\r\n            int i;\r\n            for (i = 0; i < 9 ; ++i) {\r\n                monFichier << \",\" << tab[i];\r\n            }\r\n            monFichier << \",\" << tab[i]<<endl;\r\n        }\r\n        monFichier.close();\r\n    }else{\r\n        cout << \"ERREUR: Impossible d'ouvrir le fichier.\" << endl;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Gestion_memoire/Gestion_membre.cpp	(revision b9b0c2383231ac060a3970efe713f6ffc99616b6)
++++ Gestion_memoire/Gestion_membre.cpp	(date 1588667510800)
+@@ -5,7 +5,7 @@
+ #include <windows.h>
+ #include <dirent.h>
+ #include "Gestion_membre.h"
+-#include "Personne.hpp"
++#include "../Association_class/Personne.hpp"
+ #include <fstream>
+ #include <vector>
+ #include <unistd.h>
+@@ -43,40 +43,40 @@
+                 if(type.compare("ADMIN") ==0){
+                     Membre tMembre = Membre();
+                     int tNotes[NB_NOTES_MEMBRE];
+-
+                     //On règle les paramètres de personne
+ 
+                     ligne = ligne.substr(temp2+1,ligne.length());
+                     temp2 = ligne.find(",");
+                     tMembre.setNom(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tMembre.getNom()<<",";
+                     temp2 = ligne.find(",");
+                     tMembre.setPrenom(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
++                    std::cout<<tMembre.getPrenom()<<",";
+ 
+                     temp2 = ligne.find(",");
+                     tMembre.setDepartement(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tMembre.getDepartement()<<",";
+                     temp2 = ligne.find(",");
+                     tMembre.setMail(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tMembre.getMail()<<",";
+                     temp2 = ligne.find(",");
+                     tMembre.setID(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tMembre.getID()<<",";
+                     temp2 = ligne.find(",");
+                     tMembre.setpass(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tMembre.getpass()<<",";
+                     temp2 = ligne.find(",");
+                     tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tMembre.getsaves()<<",";
+                     temp2 = ligne.find(",");
+-                    if((ligne.substr(0,temp2).compare("Administrateur")){
++                    if((ligne.substr(0,temp2).compare("Administrateur") == 0)){
+                         tMembre.setAdmin();
+                     }
+                     ligne = ligne.substr(temp2+1,ligne.length());
+@@ -87,15 +87,19 @@
+                     temp2 = ligne.find(",");
+                     tMembre.setpole(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    cout<<tMembre.getpole()<<",";
+                     for (int i = 0; i < NB_NOTES_MEMBRE  ; ++i) {
+                         temp2 = ligne.find(",");
+                         temp = ligne.substr(0,temp2);
+                         ligne = ligne.substr(temp2+1,ligne.length());
+                         tNotes[i] = std::stoi(temp);
++                        cout<<tNotes[i]<<",";
+                     }
++                    cout<<endl;
+                     tMembre.setNotes(tNotes);
+                     result.ajouterMembre(tMembre);
++                    cout<<"fin1"<<endl;
++
+                 }else{
+                     int tNotes[NB_NOTES_CONSULTANT];
+                     Consultant tConsultant = Consultant();
+@@ -106,44 +110,46 @@
+                     temp2 = ligne.find(",");
+                     tConsultant.setNom(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getNom()<<",";
+                     temp2 = ligne.find(",");
+                     tConsultant.setPrenom(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getPrenom()<<",";
+                     temp2 = ligne.find(",");
+                     tConsultant.setDepartement(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getDepartement()<<",";
+                     temp2 = ligne.find(",");
+                     tConsultant.setMail(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getMail()<<",";
+                     temp2 = ligne.find(",");
+-                    tMembre.setID(ligne.substr(0,temp2));
++                    tConsultant.setID(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getID()<<",";
+                     temp2 = ligne.find(",");
+-                    tMembre.setpass(ligne.substr(0,temp2));
++                    tConsultant.setpass(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getpass()<<",";
+                     temp2 = ligne.find(",");
+-                    tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));
++                    tConsultant.setsaves(std::stoi(ligne.substr(0,temp2)));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getsaves()<<",";
+ 
+                     //on règle les paramètres de membre
+ 
+                     temp2 = ligne.find(",");
+                     tConsultant.setMission(ligne.substr(0,temp2));
+                     ligne = ligne.substr(temp2+1,ligne.length());
+-
++                    std::cout<<tConsultant.getMission()<<",";
+                     for (int i = 0; i < NB_NOTES_CONSULTANT  ; ++i) {
+                         temp2 = ligne.find(",");
+                         temp = ligne.substr(0,temp2);
+                         ligne = ligne.substr(temp2+1,ligne.length());
+                         tNotes[i] = std::stoi(temp);
++                        std::cout<<tNotes[i]<<",";
+                     }
++                    std::cout<<endl;
+                     tConsultant.setNotes(tNotes);
+                     result.ajouterConsultant(tConsultant);
+                 }
