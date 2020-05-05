@@ -14,5 +14,6 @@ int main(int argc, char *argv[]) {
     RenduPDF rendu2 = RenduPDF("/tmp/testMembre.pdf");
     rendu2.Generer_membre(pMembre);
 
+
     return 0;
 }
