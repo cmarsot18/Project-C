@@ -164,6 +164,8 @@ public:
     int* getNotes();
 
     void setAdmin();
+
+    bool getAdmin();
    /*!
    *  \brief Redefinition de l'operateur ==
    *

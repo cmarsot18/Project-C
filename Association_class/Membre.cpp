@@ -90,3 +90,5 @@ int* Membre::getNotes(){
 }
 
 void Membre::setAdmin() {this->Admin = !this->Admin;}
+
+bool Membre::getAdmin() {return this->Admin;}

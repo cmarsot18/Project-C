@@ -5,6 +5,7 @@
 #include <windows.h>
 #include <dirent.h>
 #include "Gestion_membre.h"
+#include "Personne.hpp"
 #include <fstream>
 #include <vector>
 #include <unistd.h>
@@ -62,6 +63,24 @@ Association Gestion_membre::Load(string NomAsso) {
                     tMembre.setMail(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
 
+                    temp2 = ligne.find(",");
+                    tMembre.setID(ligne.substr(0,temp2));
+                    ligne = ligne.substr(temp2+1,ligne.length());
+
+                    temp2 = ligne.find(",");
+                    tMembre.setpass(ligne.substr(0,temp2));
+                    ligne = ligne.substr(temp2+1,ligne.length());
+
+                    temp2 = ligne.find(",");
+                    tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));
+                    ligne = ligne.substr(temp2+1,ligne.length());
+
+                    temp2 = ligne.find(",");
+                    if((ligne.substr(0,temp2).compare("Administrateur")){
+                        tMembre.setAdmin();
+                    }
+                    ligne = ligne.substr(temp2+1,ligne.length());
+
 
                     //on règle les paramètres de membre
 
@@ -100,6 +119,18 @@ Association Gestion_membre::Load(string NomAsso) {
                     tConsultant.setMail(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
 
+                    temp2 = ligne.find(",");
+                    tMembre.setID(ligne.substr(0,temp2));
+                    ligne = ligne.substr(temp2+1,ligne.length());
+
+                    temp2 = ligne.find(",");
+                    tMembre.setpass(ligne.substr(0,temp2));
+                    ligne = ligne.substr(temp2+1,ligne.length());
+
+                    temp2 = ligne.find(",");
+                    tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));
+                    ligne = ligne.substr(temp2+1,ligne.length());
+
 
                     //on règle les paramètres de membre
 
@@ -134,9 +165,19 @@ void Gestion_membre::save(Association pAssociation) {
         vector<Membre>::iterator it;
         for(it = listMembre.begin(); it!=listMembre.end();++it){
             tMembre = *it;
-            monFichier << "ADMIN," << tMembre.getNom()+"," << tMembre.getPrenom()+",";
+            //Nomenclature
+            monFichier << "ADMIN," ;
+            //Paramètres généraux
+            monFichier<< tMembre.getNom()+"," << tMembre.getPrenom()+",";
+            monFichier << tMembre.getDepartement()+"," << tMembre.getMail()+",";
+            monFichier << tMembre.getID()+"," << tMembre.getpass()+"," << tMembre.getsaves() << ",";
+            if(tMembre.getAdmin()){
+                monFichier << "Administrateur,";
+            }else{
+                monFichier << " ,";
+            }
+            //Paramètres membres
             monFichier<< tMembre.getpole()+",";
-            monFichier << tMembre.getDepartement()+"," << tMembre.getMail();
             tab = tMembre.getNotes();
             int i;
             for ( i = 0; i < 10 ; ++i) {
@@ -148,9 +189,14 @@ void Gestion_membre::save(Association pAssociation) {
         vector<Consultant>::iterator it2;
         for(it2 = listConsultant.begin(); it2!=listConsultant.end();++it2){
             tConsultant = *it2;
-            monFichier << "CONSU," << tConsultant.getNom()+"," << tConsultant.getPrenom()+",";
-            monFichier<< tConsultant.getMission()+",";
+            //Nomenclature
+            monFichier << "CONSU," ;
+            //Paramètres généraux
+            monFichier << tConsultant.getNom()+"," << tConsultant.getPrenom()+",";
             monFichier << tConsultant.getDepartement()+"," << tConsultant.getMail();
+            monFichier << tMembre.getID()+"," << tMembre.getpass()+"," << tMembre.getsaves() << ",";
+            //Paramètres Consultant
+            monFichier<< tConsultant.getMission()+",";
             tab = tConsultant.getNotes();
             int i;
             for (i = 0; i < 9 ; ++i) {
