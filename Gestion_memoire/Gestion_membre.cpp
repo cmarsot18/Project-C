@@ -2,10 +2,10 @@
 // Created by marso on 28/04/2020.
 //
 #include <stdio.h>
-//#include <windows.h>
+#include <windows.h>
 #include <dirent.h>
 #include "Gestion_membre.h"
-#include "Personne.hpp"
+#include "../Association_class/Personne.hpp"
 #include <fstream>
 #include <vector>
 #include <unistd.h>
@@ -43,40 +43,40 @@ Association Gestion_membre::Load(string NomAsso) {
                 if(type.compare("ADMIN") ==0){
                     Membre tMembre = Membre();
                     int tNotes[NB_NOTES_MEMBRE];
-
                     //On règle les paramètres de personne
 
                     ligne = ligne.substr(temp2+1,ligne.length());
                     temp2 = ligne.find(",");
                     tMembre.setNom(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tMembre.getNom()<<",";
                     temp2 = ligne.find(",");
                     tMembre.setPrenom(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
+                    std::cout<<tMembre.getPrenom()<<",";
 
                     temp2 = ligne.find(",");
                     tMembre.setDepartement(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tMembre.getDepartement()<<",";
                     temp2 = ligne.find(",");
                     tMembre.setMail(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tMembre.getMail()<<",";
                     temp2 = ligne.find(",");
                     tMembre.setID(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tMembre.getID()<<",";
                     temp2 = ligne.find(",");
                     tMembre.setpass(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tMembre.getpass()<<",";
                     temp2 = ligne.find(",");
                     tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tMembre.getsaves()<<",";
                     temp2 = ligne.find(",");
-                    if((ligne.substr(0,temp2).compare("Administrateur")){
+                    if((ligne.substr(0,temp2).compare("Administrateur") == 0)){
                         tMembre.setAdmin();
                     }
                     ligne = ligne.substr(temp2+1,ligne.length());
@@ -87,15 +87,19 @@ Association Gestion_membre::Load(string NomAsso) {
                     temp2 = ligne.find(",");
                     tMembre.setpole(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    cout<<tMembre.getpole()<<",";
                     for (int i = 0; i < NB_NOTES_MEMBRE  ; ++i) {
                         temp2 = ligne.find(",");
                         temp = ligne.substr(0,temp2);
                         ligne = ligne.substr(temp2+1,ligne.length());
                         tNotes[i] = std::stoi(temp);
+                        cout<<tNotes[i]<<",";
                     }
+                    cout<<endl;
                     tMembre.setNotes(tNotes);
                     result.ajouterMembre(tMembre);
+                    cout<<"fin1"<<endl;
+
                 }else{
                     int tNotes[NB_NOTES_CONSULTANT];
                     Consultant tConsultant = Consultant();
@@ -106,44 +110,46 @@ Association Gestion_membre::Load(string NomAsso) {
                     temp2 = ligne.find(",");
                     tConsultant.setNom(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getNom()<<",";
                     temp2 = ligne.find(",");
                     tConsultant.setPrenom(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getPrenom()<<",";
                     temp2 = ligne.find(",");
                     tConsultant.setDepartement(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getDepartement()<<",";
                     temp2 = ligne.find(",");
                     tConsultant.setMail(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getMail()<<",";
                     temp2 = ligne.find(",");
-                    tMembre.setID(ligne.substr(0,temp2));
+                    tConsultant.setID(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getID()<<",";
                     temp2 = ligne.find(",");
-                    tMembre.setpass(ligne.substr(0,temp2));
+                    tConsultant.setpass(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getpass()<<",";
                     temp2 = ligne.find(",");
-                    tMembre.setsaves(std::stoi(ligne.substr(0,temp2)));
+                    tConsultant.setsaves(std::stoi(ligne.substr(0,temp2)));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getsaves()<<",";
 
                     //on règle les paramètres de membre
 
                     temp2 = ligne.find(",");
                     tConsultant.setMission(ligne.substr(0,temp2));
                     ligne = ligne.substr(temp2+1,ligne.length());
-
+                    std::cout<<tConsultant.getMission()<<",";
                     for (int i = 0; i < NB_NOTES_CONSULTANT  ; ++i) {
                         temp2 = ligne.find(",");
                         temp = ligne.substr(0,temp2);
                         ligne = ligne.substr(temp2+1,ligne.length());
                         tNotes[i] = std::stoi(temp);
+                        std::cout<<tNotes[i]<<",";
                     }
+                    std::cout<<endl;
                     tConsultant.setNotes(tNotes);
                     result.ajouterConsultant(tConsultant);
                 }
