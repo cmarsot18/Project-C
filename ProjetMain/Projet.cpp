@@ -17,7 +17,10 @@ int main(int argc, char *argv[]) {
 
     Association aj = Gestion_membre::Load("AJIR");
     string path = "QS.csv";
+
     CollecteurCSV::MAJMembres(path,aj);
+
+
 
     return 0;
 }

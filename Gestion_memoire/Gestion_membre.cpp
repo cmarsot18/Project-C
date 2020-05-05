@@ -182,7 +182,7 @@ void Gestion_membre::save(Association pAssociation) {
                 monFichier << " ,";
             }
             //Paramètres membres
-            monFichier<< tMembre.getpole()+",";
+            monFichier<< tMembre.getpole();
             tab = tMembre.getNotes();
             int i;
             for ( i = 0; i < 10 ; ++i) {
@@ -198,10 +198,10 @@ void Gestion_membre::save(Association pAssociation) {
             monFichier << "CONSU," ;
             //Paramètres généraux
             monFichier << tConsultant.getNom()+"," << tConsultant.getPrenom()+",";
-            monFichier << tConsultant.getDepartement()+"," << tConsultant.getMail();
-            monFichier << tMembre.getID()+"," << tMembre.getpass()+"," << tMembre.getsaves() << ",";
+            monFichier << tConsultant.getDepartement()+"," << tConsultant.getMail()+",";
+            monFichier << tConsultant.getID()+"," << tConsultant.getpass()+"," << tConsultant.getsaves() << ",";
             //Paramètres Consultant
-            monFichier<< tConsultant.getMission()+",";
+            monFichier<< tConsultant.getMission();
             tab = tConsultant.getNotes();
             int i;
             for (i = 0; i < 9 ; ++i) {

@@ -132,6 +132,8 @@ void CollecteurCSV::MAJMembres(std::string pathCSV, Association asso) {
                         Membre mb = Membre(mpole, mnom, mprenom, mmail, mdepartement);
                         mb.setNotes(mnotes);
                         mb.setsaves(1);
+                        mb.setID("ID");
+                        mb.setpass("PASS");
 
                         asso.ajouterMembre(mb);
                         vm = asso.getMembres();
@@ -151,7 +153,8 @@ void CollecteurCSV::MAJMembres(std::string pathCSV, Association asso) {
                         Consultant consu = Consultant(cpole, cnom, cprenom, cmail, cdepartement);
                         consu.setNotes(cnotes);
                         consu.setsaves(1);
-
+                        consu.setID("ID");
+                        consu.setpass("PASS");
                         asso.ajouterConsultant(consu);
 
 
