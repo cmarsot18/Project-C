@@ -79,15 +79,26 @@ public:
     int getNombre_Membres() const;
 
     /*!
+    * \brief Permet d'obtenir le nombre de consultants de l'association
+    */
+    int getNombre_Consultants() const;
+
+    /*!
      * \brief Permet d'obtenir la liste des membres de l'association
      */
     vector<Membre> getMembres() const;
     vector<Consultant> getConsultant() const;
 
     /*!
-     * \brief Permet de modifier la liste des membres de l'association
+     * \brief Permet de modifier la liste des consultants de l'association
      */
+    vector<Consultant> setConsultants(vector<Consultant> p_listeConsultants);
+
+    /*!
+    * \brief Permet de modifier la liste des membres de l'association
+    */
     vector<Membre> setMembres(vector<Membre> p_listeMembres);
+
 
     /*!
      * \brief Permet d'ajouter un membre dans l'association

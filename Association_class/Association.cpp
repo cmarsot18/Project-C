@@ -42,6 +42,10 @@ int Association::getNombre_Membres() const{
     return membres.size();
 };
 
+int Association::getNombre_Consultants() const {
+    return consultants.size();
+};
+
 vector<Membre> Association::getMembres() const{
     return membres;
 };
@@ -53,6 +57,11 @@ vector<Consultant> Association::getConsultant() const {
 vector<Membre> Association::setMembres(vector<Membre> listeMembres) {
     membres = listeMembres;
     return membres;
+};
+
+vector<Consultant> Association::setConsultants(vector<Consultant> listeConsultants) {
+    consultants = listeConsultants;
+    return consultants;
 };
 
 void Association::ajouterMembre(const Membre p_membre){
