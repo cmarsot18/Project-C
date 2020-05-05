@@ -2,7 +2,6 @@
 // Created by marso on 28/04/2020.
 //
 #include <stdio.h>
-#include <windows.h>
 #include <dirent.h>
 #include "Gestion_membre.h"
 #include "../Association_class/Personne.hpp"

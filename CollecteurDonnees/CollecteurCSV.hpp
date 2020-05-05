@@ -2,9 +2,13 @@
 #define COLLECTEURCSV_H
 
 #include <string>
-#include "CollecteurDonnees.hpp"
-#include "../Association_class/Association.hpp"
-#include "../Association_class/Membre.h"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <sstream>
+
+#include "../Gestion_memoire/Gestion_membre.h"
 
 
 /*!
@@ -18,21 +22,16 @@
 */
 class CollecteurCSV {
 
-    private :
+private :
     std::string pathCSV;
     std::string pathTxt;
-        
-    public :
-    /*!
-    * \brief Chargement du fichier
-    * Permet à partir de son chemin de récupérer le fichier CSV contenant les réponses des membres
-    */
-        static void Chargement(std::string pathCSV);
+
+public :
 
     /*!
     * \brief Mise à jour des membres
     * Permet de mettre à jour la liste des membres de l'association contenue dans un fichier texte    */
-        static void MAJMembres(std::string pathTxt);
+    static void MAJMembres(std::string path, Association asso);
 
 
 
