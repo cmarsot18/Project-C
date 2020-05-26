@@ -36,7 +36,7 @@ public:
     * \brief Consulter_fiche affiche une fiche
     * Permet d'afficher la fiche du membre à qui appartient la session
     */
-    void Consulter_fiche();
+    void Consulter_fiche(string p_path);
 
 private:
     Consultant consultant;

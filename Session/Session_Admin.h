@@ -30,7 +30,7 @@ public:
      * \brief Affiche une fiche
      * Affiche la fiche du membre cible
      */
-    void Consulter_fiche(Personne pMembre);
+    void Consulter_fiche(string p_path , Personne *pMembre);
     /*!
      * \brief Permet l'ajout d'administrateur
      * permet de changer la session choisie en session administrateur

@@ -16,6 +16,7 @@
 #include <string>
 #include "../Association_class/Membre.h"
 #include "Session_Consultant.h"
+#include "Association.hpp"
 
 /*!
  * \Class Session_membre
@@ -26,6 +27,7 @@
 class Session_Membre:public Session_Consultant {
 private :
     Membre personne;
+    Association association;
 public:
     void setMembre(const Personne);
     Personne getMembre() const;
@@ -36,7 +38,7 @@ public:
 * \brief affiche la fiche asso
 * permet de consulter la fiche de l'association
 */
-    void Consulter_fiche_asso();
+    void Consulter_fiche_asso(string p_path);
 /*!
 * \brief Setter pour l'attribut personne
 * permet de renseigner le memebre associe à la session
