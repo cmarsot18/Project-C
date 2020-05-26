@@ -3,6 +3,7 @@
 //
 
 #include "Session_Consultant.h"
+#include "RenduPDF.hpp"
 
 using namespace std;
 
@@ -26,6 +27,8 @@ void Session_Consultant::setConsultant(const Consultant p_consultant) {
     consultant = p_consultant;
 }
 
-void Session_Consultant::Consulter_fiche() {
-
+void Session_Consultant::Consulter_fiche(string p_path) {
+    RenduPDF rendu = RenduPDF(p_path);
+    Consultant *p_consultant = new Consultant(consultant.getMission(),consultant.getNom(),consultant.getPrenom());
+    rendu.Fiche(p_consultant);
 }
