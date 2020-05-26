@@ -15,10 +15,10 @@ int main(int argc, char *argv[]) {
     rendu2.Generer_membre(pMembre); */
 
 
-    Association aj = Gestion_membre::Load("AJIR");
-    string path = "QS.csv";
+   Association aj = Gestion_membre::Load("AJIR");
+   string path = "QS.csv";
 
-    CollecteurCSV::MAJMembres(path,aj);
+   CollecteurCSV::MAJMembres(path,aj);
 
 
 

@@ -15,9 +15,8 @@
 #include <iostream>
 #include <string>
 #include "Session_Membre.h"
-#include "Session.h"
 #include "../Association_class/Personne.hpp"
-
+class Session;
 /*!
  * \Class Session_Admin
  * \brief Cette classe defini les session administrateur

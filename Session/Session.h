@@ -16,7 +16,6 @@
 #include <string>
 #include "Association.hpp"
 #include "Membre.h"
-#include "../Gestion_memoire/Gestion_membre.h"
 
 /*!
  * \Class Session

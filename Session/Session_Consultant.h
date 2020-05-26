@@ -24,7 +24,7 @@
  * Cette session est celle qui possede le moins de droit et donc herite directement de session
  */
 
-class Session_Consultant : public Session {
+class Session_Consultant:public Session {
 public:
     void setConsultant(const Consultant);
     Consultant getConsultant() const;
