@@ -7,19 +7,14 @@ include_directories(Association_class)
 include_directories(CollecteurDonnees)
 include_directories(RenduDonnees)
 include_directories(Session)
-include_directories(Gestion_memoire)
 
 add_executable(Project_C
         Association_class/Association.hpp
-        Association_class/Association.cpp
         Association_class/Consultant.cpp
         Association_class/Consultant.h
         Association_class/Personne.hpp
         Association_class/Personne.cpp
-        Association_class/Membre.h
-        Association_class/Membre.cpp
         CollecteurDonnees/CollecteurCSV.hpp
-        CollecteurDonnees/CollecteurCSV.cpp
         CollecteurDonnees/CollecteurDonnees.hpp
         RenduDonnees/RenduDonnees.hpp
         RenduDonnees/RenduPDF.hpp
@@ -32,26 +27,19 @@ add_executable(Project_C
         Session/Session_Consultant.h
         Session/Session_Membre.cpp
         Session/Session_Membre.h
-        Gestion_memoire/Gestion_membre.cpp
-        Gestion_memoire/Gestion_membre.h
+        Association_class/Membre.h
+        Association_class/Membre.cpp
+        Association_class/Association.cpp
         ProjetMain/Projet.cpp
         ProjetMain/Projet.h)
 
 add_executable(Test
         Association_class/Association.hpp
-        Association_class/Association.cpp
         Association_class/Consultant.cpp
         Association_class/Consultant.h
-        Association_class/Membre.h
-        Association_class/Membre.cpp
         Association_class/Personne.hpp
         Association_class/Personne.cpp
         Association_class/TestAssociation.h
-        Association_class/TestAssociation.cpp
-        Association_class/TestConsultant.h
-        Association_class/TestConsultant.cpp
-        Association_class/TestMembre.h
-        Association_class/TestMembre.cpp
         CollecteurDonnees/CollecteurCSV.hpp
         CollecteurDonnees/CollecteurDonnees.hpp
         CollecteurDonnees/TestCollecteurCSV.cpp
@@ -69,18 +57,24 @@ add_executable(Test
         Session/Session_Consultant.h
         Session/Session_Membre.cpp
         Session/Session_Membre.h
-        Session/TestSession.h
-        Session/TestSession.cpp
+        Association_class/Membre.h
+        Association_class/TestAssociation.cpp
+        Association_class/Membre.cpp
+        Association_class/Association.cpp
+        Test/TestUnit.h
+        Test/TestProject.cpp
+        Association_class/TestConsultant.h
+        Association_class/TestConsultant.cpp
+        Association_class/TestMembre.h
+        Association_class/TestMembre.cpp
+        #Session/TestSession.h
+        #Session/TestSession.cpp
         Session/TestSessionConsultant.h
         Session/TestSessionConsultant.cpp
         Session/TestSessionMembre.h
         Session/TestSessionMembre.cpp
         Session/TestSessionAdmin.h
-        Session/TestSessionAdmin.cpp
-        Gestion_memoire/Gestion_membre.h
-        Gestion_memoire/Gestion_membre.cpp
-        Test/TestUnit.h
-        Test/TestProject.cpp)
+        Session/TestSessionAdmin.cpp)
 
 target_link_libraries(Test /usr/lib/x86_64-linux-gnu/libcppunit.so)
 target_link_libraries(Test /usr/lib/x86_64-linux-gnu/libhpdf-2.3.0.so)

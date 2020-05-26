@@ -14,6 +14,9 @@
 
 #include <iostream>
 #include <string>
+#include "Association.hpp"
+#include "Membre.h"
+#include "../Gestion_memoire/Gestion_membre.h"
 
 /*!
  * \Class Session
@@ -22,23 +25,29 @@
  */
 
 class Session {
+
 private:
     std::string ID;
     std::string Pass;
+
 public:
     Session();
-    Session(const std::string,const std::string);
-    void setID(const std::string);
-    void setPass(const std::string);
+
+    Session(const std::string p_ID, const std::string p_Pass);
+
+    void setID(const std::string p_ID);
+
+    void setPass(const std::string p_Pass);
+
     std::string getID() const;
+
     std::string getPass() const;
 
     /*!
      * \brief Permet de se connecter à sa session
      * Renvoie un booleen decrivant si la connection peut s'etablir
      */
-    bool Connection(const std::string,const std::string) const;
+    bool Connection(const std::string p_Nom, const std::string p_Prenom, bool p_statut, Association asso) const;
+
 };
-
-
 #endif //PROJET_C_SESSION_H
