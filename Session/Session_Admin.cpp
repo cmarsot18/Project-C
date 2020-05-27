@@ -17,3 +17,10 @@ void Session_Admin::Consulter_fiche(string p_path , Personne *pMembre) {
 Session_Admin::~Session_Admin() {
 
 }
+
+void Ajouter_Admin(Membre pMembre) {
+    if (!pMembre.getAdmin())
+    {
+        pMembre.setAdmin();
+    }
+}
