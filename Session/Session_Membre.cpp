@@ -9,7 +9,8 @@ Session_Membre::Session_Membre() {
 
 }
 
-Session_Membre::Session_Membre(const Membre) {
+Session_Membre::Session_Membre(const Membre p_membre) {
+    personne = p_membre;
 
 }
 Session_Membre::~Session_Membre() {
@@ -17,10 +18,11 @@ Session_Membre::~Session_Membre() {
 }
 
 Personne Session_Membre::getMembre() const {
-
+    return personne;
 }
 
-void Session_Membre::setMembre(const Membre) {
+void Session_Membre::setMembre(const Membre p_membre) {
+        personne = p_membre;
 
 }
 
