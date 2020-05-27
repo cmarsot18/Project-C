@@ -36,6 +36,7 @@ public:
      */
     Session_Admin(Membre pMembre);
     virtual ~Session_Admin();
+    void Ajouter_Admin(Membre pMembre);
 };
 
 
