@@ -6,7 +6,7 @@
 #include "RenduPDF.hpp"
 
 Session_Admin::Session_Admin(Membre pMembre) {
-
+    personne = pMembre;
 }
 
 void Session_Admin::Consulter_fiche(string p_path , Personne *pMembre) {
