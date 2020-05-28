@@ -46,7 +46,7 @@ public:
      * \brief Permet de se connecter à sa session
      * Renvoie un booleen decrivant si la connection peut s'etablir
      */
-    bool Connection(const std::string p_Nom, const std::string p_Prenom, bool p_statut, Association asso) const;
+    bool Connection(const std::string p_Nom, const std::string p_Prenom, Association asso) const;
 
 };
 #endif //PROJET_C_SESSION_H

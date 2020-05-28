@@ -22,4 +22,6 @@
 #include "../Session/Session_Admin.h"
 #include "../Gestion_memoire/Gestion_membre.h"
 
+#include <dirent.h>
+
 #endif //PROJECT_C_PROJET_H

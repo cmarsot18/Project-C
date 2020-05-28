@@ -16,17 +16,17 @@ Session::Session(const std::string p_ID, const std::string p_Pass) {
     Pass = p_Pass;
 }
 
-bool Session::Connection(const std::string p_Nom, const std::string p_Prenom, bool p_statut, Association asso)const{
+bool Session::Connection(const std::string p_Nom, const std::string p_Prenom, Association asso)const{
     vector<Membre> vm = asso.getMembres();
     Membre m;
     std::string identifiant;
     std::string mdp;
     bool res;
-    int i;
-    while (i<vm.size()){
+    int i=0;
+    while (i<=vm.size()){
         if (vm[i].getNom() == p_Nom && vm[i].getPrenom() == p_Prenom){
             m = vm[i];
-            i=vm.size();
+            i=vm.size()+1;
         }
         else{
             i=i+1;
