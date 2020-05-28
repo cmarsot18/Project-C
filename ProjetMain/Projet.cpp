@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
     RenduPDF rendu1 = RenduPDF( "/tmp/testConsultant.pdf");
     rendu1.Generer_membre(pConsultant);
     RenduPDF rendu2 = RenduPDF("/tmp/testMembre.pdf");
-    rendu2.Generer_membre(pMembre); */
+    rendu2.Generer_membre(pMembre);*/
 
 
    Association aj = Gestion_membre::Load("AJIR");

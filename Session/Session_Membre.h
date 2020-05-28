@@ -26,8 +26,9 @@
 
 class Session_Membre:public Session_Consultant {
 private :
-    Membre personne;
     Association association;
+protected:
+    Membre personne;
 public:
     void setMembre(const Personne);
     Personne getMembre() const;

@@ -15,7 +15,10 @@ add_executable(Project_C
         Association_class/Personne.hpp
         Association_class/Personne.cpp
         CollecteurDonnees/CollecteurCSV.hpp
+        CollecteurDonnees/CollecteurCSV.cpp
         CollecteurDonnees/CollecteurDonnees.hpp
+        Gestion_memoire/Gestion_membre.cpp
+        Gestion_memoire/Gestion_membre.h
         RenduDonnees/RenduDonnees.hpp
         RenduDonnees/RenduPDF.hpp
         RenduDonnees/RenduPDF.cpp
