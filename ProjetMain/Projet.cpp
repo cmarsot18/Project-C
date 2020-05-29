@@ -84,6 +84,7 @@ int main(int argc, char *argv[]) {
                        string path;
                        cin>>path;
                        CollecteurCSV::MAJMembres(path,asso);
+                       cout<<"Le questionnaire a bien été chargé ! "<<endl;
                    }
                    else if (b==2)
                    {
@@ -102,24 +103,57 @@ int main(int argc, char *argv[]) {
                        rendu1.Generer_membre(membre);
                        cout<<"La fiche est disponible dans le dossier tmp"<<endl;
                    }
+                   else
+                   {
+                       RenduPDF rendu1 = RenduPDF( "/tmp/" + asso.getNom() + ".pdf");
+                       rendu1.Generer_Association(asso);
+                       cout<<"La fiche est disponible dans le dossier tmp"<<endl;
+                   }
                }
 
            }
            else
            {
                Session_Membre sessionM = Session_Membre(membres[a]);
+               bool connecte = sessionM.Connection(membres[a].getNom(),membres[a].getPrenom(),asso);
+               if (connecte) {
+                   cout << "Consulter ma fiche (1), Consulter la fiche de l'association (2) :" << endl;
+                   int b;
+                   cin >> b;
+                   if (b == 1) {
+                       vector<Membre> membres1 = asso.getMembres();
+                       Membre *membre = new Membre(membres1[a].getpole(), membres1[a].getNom(),
+                                                   membres1[a].getPrenom());
+                       int *notes = membres1[a].getNotes();
+                       membre->setNotes(notes);
+                       RenduPDF rendu1 = RenduPDF("/tmp/" + membre->getPrenom() + membre->getNom() + ".pdf");
+                       rendu1.Generer_membre(membre);
+                       cout << "Votre fiche est disponible dans le dossier tmp" << endl;
+                   }
+                   else
+                       {
+                       RenduPDF rendu1 = RenduPDF("/tmp/" + asso.getNom() + ".pdf");
+                       rendu1.Generer_Association(asso);
+                       cout << "La fiche est disponible dans le dossier tmp" << endl;
+                   }
+               }
            }
 
        }
-
-
+       else
+       {
+           cout<<"Vous pouvez ici consulter votre fiche"<<endl;
+           vector<Consultant> consultants1 = asso.getConsultant();
+           Consultant *consultant = new Consultant(consultants1[a].getMission(), consultants1[a].getNom(),consultants1[a].getPrenom());
+           int *notes = consultant[a].getNotes();
+           consultant->setNotes(notes);
+           RenduPDF rendu1 = RenduPDF("/tmp/" + consultant->getPrenom() + consultant->getNom() + ".pdf");
+           rendu1.Generer_membre(consultant);
+           cout << "Votre fiche est disponible dans le dossier tmp" << endl;
+       }
    }
    else
        cout<<"Option invalide"<< endl;
-
-
-
-
 
     return 0;
 }
